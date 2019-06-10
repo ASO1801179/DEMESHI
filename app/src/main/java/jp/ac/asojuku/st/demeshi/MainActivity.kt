@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         kari.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
+
         
     }
 }
