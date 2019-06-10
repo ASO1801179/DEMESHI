@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoCard">
+
+    <ImageButton
+        android:id="@+id/PhotoCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HaveCardBtn"
+        app:srcCompat="@drawable/camera" />
+
+    <ImageButton
+        android:id="@+id/HaveCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MyCardBtn"
+        app:srcCompat="@drawable/havecard" />
+
+    <ImageButton
+        android:id="@+id/MyCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mycard" />
+
+    <Button
+        android:id="@+id/Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="カメラ起動"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

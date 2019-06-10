@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ListTextSize">36sp</dimen>
+    <dimen name="TabBtnWidth">199dp</dimen>
+    <dimen name="TabBtnHeight">60dp</dimen>
+</resources>
