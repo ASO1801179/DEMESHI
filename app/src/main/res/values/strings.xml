@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DEMESHI</string>
-    <string name="mailhint">メールアドレス</string>
+    <string name="mailhint">メールアドレスorユーザID</string>
     <string name="pwdhint">パスワード</string>
     <string name="Call">電話</string>
     <string name="Email">メール</string>
