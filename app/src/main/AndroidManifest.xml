@@ -9,20 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
         <activity android:name=".HaveCardList" />
         <activity android:name=".HaveCardDetail" />
         <activity android:name=".ShowCompany" />
         <activity android:name=".PhotoCard" />
         <activity android:name=".UserConfig" />
-        <activity android:name=".MyCardList"></activity>
+        <activity android:name=".MyCardList" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".ConfMail" />
+        <activity android:name=".ReRegister" />
+        <activity android:name=".UpdatePass" />
+        <activity android:name=".ShowMyCard" />
+        <activity android:name=".Template" />
+        <activity android:name=".CreateCard" />
+        <activity android:name=".Register"></activity>
     </application>
 
 </manifest>

@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="TabColor">#d4d1d1</color>
+    <color name="ログイン">#00ff15</color>
+    <color name="LoginColor">#00ff15</color>
 </resources>

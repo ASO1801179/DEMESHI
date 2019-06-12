@@ -1,7 +1,20 @@
 <resources>
     <string name="app_name">DEMESHI</string>
-    <string name="mailhint">メールアドレスorユーザID</string>
-    <string name="pwdhint">パスワード</string>
+    <string name="IdHint">メールアドレスorユーザID</string>
+    <string name="PasswordHint">パスワード</string>
     <string name="Call">電話</string>
-    <string name="Email">メール</string>
+    <string name="Mail">メール</string>
+    <string name="LastNameHint">姓</string>
+    <string name="FirstNameHint">名</string>
+    <string name="CallHint">電話番号</string>
+    <string name="MailHint">メールアドレス</string>
+    <string name="ConfPasswordHint">確認パスワード</string>
+    <string name="RegisterBtn">登録</string>
+    <string name="ForgetMailHint">再設定用メールアドレス</string>
+    <string name="SendBtn">送信</string>
+    <string name="LoginHint">ログイン</string>
+    <string name="ForgotPassText">パスワードを忘れた場合</string>
+    <string name="ConfRegisterText">確認メールを送信しました</string>
+    <string name="ConfForgotText">再設定用のリンクを入力した\nメールアドレスに送信しました</string>
+    <string name="MoveLogin">ログイン画面へ</string>
 </resources>
