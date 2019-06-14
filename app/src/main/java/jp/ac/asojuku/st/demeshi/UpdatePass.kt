@@ -11,5 +11,6 @@ class UpdatePass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_pass)
         BackLogin.setOnClickListener{startActivity(Intent(it.context,Login::class.java))}
+        
     }
 }
