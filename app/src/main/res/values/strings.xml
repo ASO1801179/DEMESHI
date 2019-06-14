@@ -17,4 +17,7 @@
     <string name="ConfRegisterText">確認メールを送信しました</string>
     <string name="ConfForgotText">再設定用のリンクを入力した\nメールアドレスに送信しました</string>
     <string name="MoveLogin">ログイン画面へ</string>
+    <string name="NewPasswordHint">新しいパスワード</string>
+    <string name="ReRegisterBtn">再登録</string>
+    <string name="NewPassword">パスワードを再設定しました</string>
 </resources>

@@ -7,7 +7,7 @@
     tools:context=".ConfMail">
 
     <TextView
-        android:id="@+id/ConfText"
+        android:id="@+id/Aiw"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="wrap_content"
         android:layout_marginTop="412dp"
@@ -29,6 +29,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfText"
+        app:layout_constraintTop_toBottomOf="@+id/Aiw"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

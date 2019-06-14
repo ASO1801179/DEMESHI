@@ -28,8 +28,8 @@
 
     <EditText
         android:id="@+id/MailText"
-        android:layout_width="360dp"
-        android:layout_height="85dp"
+        android:layout_width="@dimen/TextBoxWidth"
+        android:layout_height="@dimen/TextBoxHeight"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
