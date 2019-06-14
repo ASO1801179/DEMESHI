@@ -5,31 +5,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyCardList">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="163dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="286dp"
-        app:layout_constraintBottom_toTopOf="@+id/businesscard_create"
+
+    <Button
+        android:id="@+id/MailBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/Mail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CompanyName"
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn" />
+
+    <ImageView
+        android:id="@+id/MyCard"
+        android:layout_width="188dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/meishi" />
-    <Button
-        android:id="@+id/businesscard_create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:background="#00F881"
-        android:text="名刺作成"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <TextView
+        android:id="@+id/CompanyName"
+        android:layout_width="281dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:text="企業名"
+        android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toEndOf="@+id/MyCard"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="281dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="108dp"
+        android:text="名前"
+        android:textSize="@dimen/ListTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/MyCard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/PhotoCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HaveCardBtn"
+        app:srcCompat="@drawable/camera" />
+
+    <ImageButton
+        android:id="@+id/HaveCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MyCardBtn"
+        app:srcCompat="@drawable/havecard" />
+
+    <ImageButton
+        android:id="@+id/MyCardBtn"
+        android:layout_width="@dimen/TabBtnWidth"
+        android:layout_height="@dimen/TabBtnHeight"
+        android:background="@color/TabColor"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:srcCompat="@drawable/mycard" />
+
+    <ImageButton
+        android:id="@+id/AddBtn"
+        android:layout_width="@dimen/AddBtnFrame"
+        android:layout_height="@dimen/AddBtnFrame"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="476dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MailBtn"
+        app:srcCompat="@drawable/add" />
 </android.support.constraint.ConstraintLayout>

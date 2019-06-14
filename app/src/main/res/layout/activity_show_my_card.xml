@@ -4,6 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowMyCard">
+    tools:context=".ShowMyCard"
+    tools:layout_editor_absoluteY="89dp">
 
+
+    <ImageView
+        android:id="@+id/MyCard"
+        android:layout_width="@dimen/MyCardWidth"
+        android:layout_height="@dimen/MyCardHeight"
+        android:layout_marginEnd="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meishi" />
+
+    <TextView
+        android:id="@+id/CompanyName"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginTop="40dp"
+        android:hint="会社名"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyCard"
+        tools:text="名前" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyName"
+        tools:text="住所" />
+
+    <TextView
+        android:id="@+id/PhoneNumber"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
+        tools:text="電話番号" />
+
+    <TextView
+        android:id="@+id/MaiAddress"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
+        tools:text="メールアドレス" />
+
+    <Button
+        android:id="@+id/CallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="電話"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849" />
+
+    <Button
+        android:id="@+id/BackBtn"
+        android:layout_width="@dimen/BackBtnWidth"
+        android:layout_height="@dimen/BackBtnHeight"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="戻る"
+        android:textSize="@dimen/BackBtnTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

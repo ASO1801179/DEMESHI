@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="89dp">
 
     <ImageView
-        android:id="@+id/meishi"
+        android:id="@+id/MyCard"
         android:layout_width="443dp"
         android:layout_height="195dp"
         android:layout_marginBottom="8dp"
@@ -34,13 +34,13 @@
         android:hint="会社名"
         android:text="TextView"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/place"
+        app:layout_constraintBottom_toTopOf="@+id/Address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="名前" />
     <TextView
-        android:id="@+id/place"
+        android:id="@+id/Address"
         android:layout_width="398dp"
         android:layout_height="96dp"
         android:layout_marginBottom="32dp"
@@ -50,13 +50,13 @@
         android:layout_marginStart="385dp"
         android:text="TextView"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.654"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="住所" />
     <TextView
-        android:id="@+id/phone"
+        android:id="@+id/PhoneNumber"
         android:layout_width="306dp"
         android:layout_height="84dp"
         android:layout_marginBottom="48dp"
@@ -66,13 +66,13 @@
         android:layout_marginStart="385dp"
         android:text="TextView"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/mail"
+        app:layout_constraintBottom_toTopOf="@+id/MaiAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="電話番号" />
     <TextView
-        android:id="@+id/mail"
+        android:id="@+id/MaiAddress"
         android:layout_width="389dp"
         android:layout_height="89dp"
         android:layout_marginBottom="44dp"
@@ -98,10 +98,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="71dp"
         android:text="電話"
-        app:layout_constraintBottom_toTopOf="@+id/mail"
+        app:layout_constraintBottom_toTopOf="@+id/MaiAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/place" />
+        app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/Address" />
 
     <Button
         android:id="@+id/Back"
