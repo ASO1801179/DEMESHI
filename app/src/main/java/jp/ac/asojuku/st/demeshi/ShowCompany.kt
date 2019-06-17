@@ -16,7 +16,7 @@ class ShowCompany : AppCompatActivity() {
         val companyname ="木下カンパニー"
         CompanyName.text="会社名："+companyname
         val jusyo ="世界で一番の最高のエデンNAGASAKI"
-        Address.text="住所："+jusyo
+        Company.text="住所："+jusyo
         val phoneban= "08064633727"
         PhoneNumber.text="電話番号"+phoneban
         BackBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardDetail::class.java))}

@@ -13,7 +13,9 @@ class MyCardList : AppCompatActivity() {
         MyCardBtn.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
         HaveCardBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
         PhotoCardBtn.setOnClickListener{startActivity(Intent(it.context,PhotoCard::class.java))}
-        AddBtn.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
+        AddInd.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
         MyCard.setOnClickListener{startActivity(Intent(it.context,ShowMyCard::class.java))}
+        Name.setOnClickListener{startActivity(Intent(it.context,ShowMyCard::class.java))}
+        CompanyName.setOnClickListener{startActivity(Intent(it.context,ShowMyCard::class.java))}
     }
 }

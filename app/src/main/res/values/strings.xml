@@ -2,11 +2,11 @@
     <string name="app_name">DEMESHI</string>
     <string name="IdHint">メールアドレスorユーザID</string>
     <string name="PasswordHint">パスワード</string>
-    <string name="Call">電話</string>
+    <string name="Phone">電話</string>
     <string name="Mail">メール</string>
     <string name="LastNameHint">姓</string>
     <string name="FirstNameHint">名</string>
-    <string name="CallHint">電話番号</string>
+    <string name="PhoneHint">電話番号</string>
     <string name="MailHint">メールアドレス</string>
     <string name="ConfPasswordHint">確認パスワード</string>
     <string name="RegisterBtn">登録</string>
@@ -20,4 +20,15 @@
     <string name="NewPasswordHint">新しいパスワード</string>
     <string name="ReRegisterBtn">再登録</string>
     <string name="NewPassword">パスワードを再設定しました</string>
+    <string name="NameHint">名前</string>
+    <string name="CompanyHint">企業</string>
+    <string name="BackHint">戻る</string>
+    <string name="CreateBtnHint">作成</string>
+    <string name="ChangeFontFamily">フォント変更</string>
+    <string name="ChangeTextColor">文字色変更</string>
+    <string name="ChangeFontSize">文字サイズ変更</string>
+    <string name="Individual">個人</string>
+    <string name="Company">企業</string>
+    <string name="Address">住所</string>
+    <string name="DeleteHint">削除</string>
 </resources>

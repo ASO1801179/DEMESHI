@@ -17,4 +17,23 @@
     <dimen name="BackBtnWidth">100dp</dimen>
     <dimen name="BackBtnHeight">60dp</dimen>
     <dimen name="BackBtnTextSize">14sp</dimen>
+    <dimen name="CreateTextWidth">250dp</dimen>
+    <dimen name="CreateTextHeight">50dp</dimen>
+    <dimen name="CreateTextSize">28sp</dimen>
+    <dimen name="CreateBtnWidth">200dp</dimen>
+    <dimen name="CreateBtnHeight">50dp</dimen>
+    <dimen name="TemplateTextHeight">60dp</dimen>
+    <dimen name="TemplateTextWidth">100dp</dimen>
+    <dimen name="TemplateTextSize">40sp</dimen>
+    <dimen name="TemplateImgWidth">150dp</dimen>
+    <dimen name="TemplateImgHeight">120dp</dimen>
+    <dimen name="TempAddBtnFrame">120dp</dimen>
+    <dimen name="DeleteBtnWidth">100dp</dimen>
+    <dimen name="DeleteBtnHeight">60dp</dimen>
+    <dimen name="CardListWidth">190dp</dimen>
+    <dimen name="CardListHeight">130dp</dimen>
+    <dimen name="CardListTextWidth">280dp</dimen>
+    <dimen name="CardListTextHeight">60dp</dimen>
+    <dimen name="ListBtnWidth">80dp</dimen>
+    <dimen name="ListBtnHeight">60dp</dimen>
 </resources>

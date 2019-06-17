@@ -6,4 +6,171 @@
     android:layout_height="match_parent"
     tools:context=".CreateCard">
 
+    <ImageView
+        android:id="@+id/BackDesign"
+        android:layout_width="@dimen/MyCardWidth"
+        android:layout_height="@dimen/MyCardHeight"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/simple_frame" />
+
+    <EditText
+        android:id="@+id/EditMail"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/MailHint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditPhone" />
+
+    <EditText
+        android:id="@+id/EditPhone"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/PhoneHint"
+        android:inputType="phone"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditName" />
+
+    <EditText
+        android:id="@+id/EditCompany"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/CompanyHint"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditMail" />
+
+    <EditText
+        android:id="@+id/EditName"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/NameHint"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackDesign" />
+
+    <Button
+        android:id="@+id/CreateBtn"
+        android:layout_width="@dimen/CreateBtnWidth"
+        android:layout_height="@dimen/CreateBtnHeight"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/CreateBtnHint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="@dimen/BackBtnWidth"
+        android:layout_height="@dimen/BackBtnHeight"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/BackHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="名前"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toTopOf="@+id/BackDesign" />
+
+    <TextView
+        android:id="@+id/Phone"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="電話番号"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Company"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="企業"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toBottomOf="@+id/Mail" />
+
+    <TextView
+        android:id="@+id/Mail"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="メールアドレス"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+    <Button
+        android:id="@+id/ChangeFontFamily"
+        android:layout_width="@dimen/CreateBtnWidth"
+        android:layout_height="@dimen/CreateBtnHeight"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/ChangeFontFamily"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackDesign" />
+
+    <Button
+        android:id="@+id/ChangeTextColor"
+        android:layout_width="@dimen/CreateBtnWidth"
+        android:layout_height="@dimen/CreateBtnHeight"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ChangeTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangeFontFamily" />
+
+    <Button
+        android:id="@+id/ChangeFontSize"
+        android:layout_width="@dimen/CreateBtnWidth"
+        android:layout_height="@dimen/CreateBtnHeight"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ChangeFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangeTextColor" />
+
 </android.support.constraint.ConstraintLayout>

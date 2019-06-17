@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/MailBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="4dp"
@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/MyCard"
-        android:layout_width="188dp"
-        android:layout_height="129dp"
+        android:layout_width="@dimen/CardListWidth"
+        android:layout_height="@dimen/CardListHeight"
         android:layout_marginTop="108dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/CompanyName"
-        android:layout_width="281dp"
-        android:layout_height="62dp"
+        android:layout_width="@dimen/CardListTextWidth"
+        android:layout_height="@dimen/CardListTextHeight"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="4dp"
@@ -46,8 +46,8 @@
 
     <TextView
         android:id="@+id/Name"
-        android:layout_width="281dp"
-        android:layout_height="62dp"
+        android:layout_width="@dimen/CardListTextWidth"
+        android:layout_height="@dimen/CardListTextHeight"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="8dp"
@@ -62,14 +62,14 @@
 
     <Button
         android:id="@+id/CallBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="108dp"
-        android:text="@string/Call"
+        android:text="@string/Phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Name"
@@ -106,7 +106,7 @@
         app:srcCompat="@drawable/mycard" />
 
     <ImageButton
-        android:id="@+id/AddBtn"
+        android:id="@+id/AddInd"
         android:layout_width="@dimen/AddBtnFrame"
         android:layout_height="@dimen/AddBtnFrame"
         android:layout_marginEnd="16dp"
