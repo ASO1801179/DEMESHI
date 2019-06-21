@@ -31,4 +31,8 @@
     <string name="Company">企業</string>
     <string name="Address">住所</string>
     <string name="DeleteHint">削除</string>
+    <string name="SettingName">Setting</string>
+    <string name="UserConfigName">ユーザー設定</string>
+    <string name="DeleteName">退会</string>
+    <string name="ReConfigBtnText">変更する</string>
 </resources>

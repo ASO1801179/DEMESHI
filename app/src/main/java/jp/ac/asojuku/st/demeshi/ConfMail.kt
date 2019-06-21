@@ -11,5 +11,10 @@ class ConfMail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_conf_mail)
         BackLogin.setOnClickListener{startActivity(Intent(it.context,Login::class.java))}
+        if(intent.getStringExtra("TextFlag") == "Register"){
+            ConfText.setText(R.string.ConfRegisterText)
+        }else if(intent.getStringExtra("TextFlag") == "Forgot"){
+            ConfText.setText(R.string.ConfForgotText)
+        }
     }
 }

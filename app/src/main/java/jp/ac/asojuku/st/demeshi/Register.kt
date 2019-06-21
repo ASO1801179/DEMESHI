@@ -10,6 +10,11 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        RegisterBtn.setOnClickListener{startActivity(Intent(it.context,ConfMail::class.java))}
+        RegisterBtn.setOnClickListener{Register()}
+    }
+    fun Register(){
+        val intent = Intent(this,ConfMail::class.java)
+        intent.putExtra("TextFlag","Register")
+        startActivity(intent)
     }
 }

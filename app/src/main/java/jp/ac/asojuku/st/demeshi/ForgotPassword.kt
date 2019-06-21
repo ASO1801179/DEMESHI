@@ -10,6 +10,11 @@ class ForgotPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
-        SendBtn.setOnClickListener{startActivity(Intent(it.context,ConfMail::class.java))}
+        SendBtn.setOnClickListener{RequestRink()}
+    }
+    fun RequestRink(){
+        val intent = Intent(this,ConfMail::class.java)
+        intent.putExtra("TextFlag","Forgot")
+        startActivity(intent)
     }
 }
