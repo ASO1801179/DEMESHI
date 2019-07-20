@@ -11,11 +11,11 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class Register : AppCompatActivity() {
 
-    var name = ""
-    var phone = ""
-    var mail = ""
-    var pass = ""
-    var confpass = ""
+//    var name = ""
+//    var phone = ""
+//    var mail = ""
+//    var pass = ""
+//    var confpass = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +27,15 @@ class Register : AppCompatActivity() {
     fun Register(){
         val intent = Intent(this,ConfMail::class.java)
         intent.putExtra("TextFlag","Register")
-        name = Name.text.toString()
-        phone = PhoneNumber.text.toString()
-        mail = Mail.text.toString()
-        pass = Password.text.toString()
-        confpass = ConfPassword.text.toString()
+        val name = Name.text.toString()
+        val phone = PhoneNumber.text.toString()
+        val mail = Mail.text.toString()
+        val pass = Password.text.toString()
+        val confpass = ConfPassword.text.toString()
         if(!name.isEmpty() and !phone.isEmpty() and !mail.isEmpty() and !pass.isEmpty() and !confpass.isEmpty()){
-            Signal(name,phone,mail,pass)
-            startActivity(intent)
+            if(Signal(name,phone,mail,pass)){
+                startActivity(intent)
+            }
 //            if(Validate(phone,mail,pass,confpass)){
 //                Signal(name,phone,mail,pass)
 //                startActivity(intent)
@@ -47,7 +48,7 @@ class Register : AppCompatActivity() {
     }
 
     //登録処理
-    fun Signal(name:String,phone:String,mail:String,pass:String){
+    fun Signal(name:String,phone:String,mail:String,pass:String):Boolean{
         // 非同期処理
         val username = Pair("user_name", name)
         val password = Pair("user_password",pass)
@@ -55,6 +56,7 @@ class Register : AppCompatActivity() {
         val number = Pair("phone_number",phone)
         val pair = listOf<Pair<String,String>>(username,password,mailaddress,number)
         val URL:String = "http://18001187.pupu.jp/untitled/public/user/insert"
+        var bool:Boolean = true
         URL.httpGet(pair)
                 .responseJson() { request, response, result ->
                     when (result) {
@@ -62,15 +64,30 @@ class Register : AppCompatActivity() {
                             // レスポンスボディを表示
                             val json = result.value.obj()
                             val results = json.get("result")// as JSONArray
-                            //val data = results[0]
-                            Toast.makeText(this, "登録できました", Toast.LENGTH_LONG).show()
-
+                            when(results){
+                                1->{
+                                    Toast.makeText(this, "登録できました", Toast.LENGTH_LONG).show()
+                                }
+                                2->{
+                                    Toast.makeText(this, "メールが既に登録されているものです", Toast.LENGTH_LONG).show()
+                                    bool = false
+                                }
+                                3->{
+                                    Toast.makeText(this, "電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
+                                    bool = false
+                                }
+                                4->{
+                                    Toast.makeText(this, "メールと電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
+                                    bool = false
+                                }
+                            }
                         }
                         is Result.Failure -> {
                             println("通信に失敗しました。")
                         }
                     }
                 }
+        return bool
     }
     //検証
     fun Validate(phone:String,mail:String,password:String,confpass:String):Boolean{
