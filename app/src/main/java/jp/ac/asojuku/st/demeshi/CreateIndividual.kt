@@ -8,10 +8,9 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import jp.ac.asojuku.st.demeshi.R.drawable.*
-import jp.ac.asojuku.st.demeshi.R.id.BackDesign
-import kotlinx.android.synthetic.main.activity_create_card.*
+import kotlinx.android.synthetic.main.activity_create_individual.*
 
-class CreateCard : AppCompatActivity() {
+class CreateIndividual : AppCompatActivity() {
 
     val user_id = intent.getIntExtra("UserId",0)
 
@@ -21,14 +20,14 @@ class CreateCard : AppCompatActivity() {
         Back.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
         CreateBtn.setOnClickListener{Create()}
         when(intent.getIntExtra("Image",0)){
-            1->{
-                BackDesign.setImageResource(green)
+            4->{
+                BackDesign.setImageResource(f4786)
             }
-            2->{
-                BackDesign.setImageResource(f4796)
+            5->{
+                BackDesign.setImageResource(f4790)
             }
-            3->{
-                BackDesign.setImageResource(f4788)
+            6->{
+                BackDesign.setImageResource(f4791)
             }
         }
         Name.bringToFront()
@@ -49,7 +48,7 @@ class CreateCard : AppCompatActivity() {
         val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert"
         //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
         val userId = Pair("user_id",user_id.toString())
-        val name = Pair("name",Name.text.toString())
+        val name = Pair("name", Name.text.toString())
         val phone = Pair("phone",Phone.text.toString())
         val mailaddress = Pair("mailaddress",Mail.text.toString())
         val number = Pair("number",Address.text.toString())

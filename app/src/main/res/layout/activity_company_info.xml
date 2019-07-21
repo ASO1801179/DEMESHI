@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompanyInfo">
+
+    <EditText
+        android:id="@+id/CompanyID"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginTop="184dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/CompanyId"
+        android:textSize="@dimen/TextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyText" />
+
+    <EditText
+        android:id="@+id/CompanyPass"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/CompanyPass"
+        android:textSize="@dimen/TextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyID" />
+
+    <TextView
+        android:id="@+id/CompanyText"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginTop="240dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="@dimen/TextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CompanyBtn"
+        android:layout_width="@dimen/BtnWidth"
+        android:layout_height="@dimen/BtnHeight"
+        android:layout_marginTop="96dp"
+        android:text="Button"
+        android:textSize="@dimen/BtnTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyPass" />
+</android.support.constraint.ConstraintLayout>

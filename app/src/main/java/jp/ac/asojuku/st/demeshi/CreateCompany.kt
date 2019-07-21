@@ -8,10 +8,9 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import jp.ac.asojuku.st.demeshi.R.drawable.*
-import jp.ac.asojuku.st.demeshi.R.id.BackDesign
-import kotlinx.android.synthetic.main.activity_create_card.*
+import kotlinx.android.synthetic.main.activity_create_company.*
 
-class CreateCard : AppCompatActivity() {
+class CreateCompany : AppCompatActivity() {
 
     val user_id = intent.getIntExtra("UserId",0)
 
@@ -21,17 +20,17 @@ class CreateCard : AppCompatActivity() {
         Back.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
         CreateBtn.setOnClickListener{Create()}
         when(intent.getIntExtra("Image",0)){
-            1->{
-                BackDesign.setImageResource(green)
+            7->{
+                BackDesign.setImageResource(space)
             }
-            2->{
-                BackDesign.setImageResource(f4796)
+            8->{
+                BackDesign.setImageResource(f4782)
             }
-            3->{
-                BackDesign.setImageResource(f4788)
+            9->{
+                BackDesign.setImageResource(f4792)
             }
         }
-        Name.bringToFront()
+        CompanyName.bringToFront()
         Phone.bringToFront()
         Mail.bringToFront()
         Address.bringToFront()
@@ -39,7 +38,7 @@ class CreateCard : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Name.text = EditName.text
+        CompanyName.text = EditCompanyName.text
         Phone.text = EditPhone.text
         Mail.text = EditMail.text
         Address.text = EditAddress.text
@@ -49,11 +48,11 @@ class CreateCard : AppCompatActivity() {
         val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert"
         //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
         val userId = Pair("user_id",user_id.toString())
-        val name = Pair("name",Name.text.toString())
+        val companyname = Pair("companyname", CompanyName.text.toString())
         val phone = Pair("phone",Phone.text.toString())
         val mailaddress = Pair("mailaddress",Mail.text.toString())
         val number = Pair("number",Address.text.toString())
-        val pair = listOf<Pair<String,String>>(userId,name,phone,mailaddress,number)
+        val pair = listOf<Pair<String,String>>(userId,companyname,phone,mailaddress,number)
         URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {

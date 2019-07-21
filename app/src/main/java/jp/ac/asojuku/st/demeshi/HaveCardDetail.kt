@@ -10,6 +10,9 @@ import kotlinx.android.synthetic.main.activity_have_card_detail.*
 
 class HaveCardDetail : AppCompatActivity() {
 
+    val user_id = intent.getIntExtra("UserId",0)
+    var card_id = intent.getIntExtra("CardId",0)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_have_card_detail)
@@ -20,11 +23,17 @@ class HaveCardDetail : AppCompatActivity() {
                 setMessage("本当に名刺を削除しますか？")
                 setPositiveButton("削除", DialogInterface.OnClickListener { _, _ ->
                     // OKをタップしたときの処理
-                    Toast.makeText(context, "削除しました", Toast.LENGTH_LONG).show()
+                    if(Delete()){
+                        Toast.makeText(context, "削除しました", Toast.LENGTH_LONG).show()
+                    }
                 })
                 setNegativeButton("キャンセル", null)
                 show()
             }
         }
+    }
+    fun Delete():Boolean{
+        var bool = true
+        return bool
     }
 }

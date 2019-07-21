@@ -27,7 +27,7 @@ class Register : AppCompatActivity() {
     fun Register(){
         val intent = Intent(this,ConfMail::class.java)
         intent.putExtra("TextFlag","Register")
-        val name = Name.text.toString()
+        val name = CompanyName.text.toString()
         val phone = PhoneNumber.text.toString()
         val mail = Mail.text.toString()
         val pass = Password.text.toString()
@@ -57,53 +57,60 @@ class Register : AppCompatActivity() {
         val pair = listOf<Pair<String,String>>(username,password,mailaddress,number)
         val URL:String = "http://18001187.pupu.jp/untitled/public/user/insert"
         var bool:Boolean = true
-        URL.httpGet(pair)
-                .responseJson() { request, response, result ->
-                    when (result) {
-                        is Result.Success -> {
-                            // レスポンスボディを表示
-                            val json = result.value.obj()
-                            val results = json.get("result")// as JSONArray
-                            when(results){
-                                1->{
-                                    Toast.makeText(this, "登録できました", Toast.LENGTH_LONG).show()
-                                }
-                                2->{
-                                    Toast.makeText(this, "メールが既に登録されているものです", Toast.LENGTH_LONG).show()
-                                    bool = false
-                                }
-                                3->{
-                                    Toast.makeText(this, "電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
-                                    bool = false
-                                }
-                                4->{
-                                    Toast.makeText(this, "メールと電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
-                                    bool = false
-                                }
-                            }
+        URL.httpGet(pair).responseJson() { request, response, result ->
+            when (result) {
+                is Result.Success -> {
+                    // レスポンスボディを表示
+                    val json = result.value.obj()
+                    val results = json.get("result")// as JSONArray
+                    when(results){
+                        1->{
+                            Toast.makeText(this, "メールを送信しました", Toast.LENGTH_LONG).show()
                         }
-                        is Result.Failure -> {
-                            println("通信に失敗しました。")
+                        2->{
+                            Toast.makeText(this, "メールが既に登録されているものです", Toast.LENGTH_LONG).show()
+                            bool = false
+                        }
+                        3->{
+                            Toast.makeText(this, "電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
+                            bool = false
+                        }
+                        4->{
+                            Toast.makeText(this, "メールと電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
+                            bool = false
+                        }
+                        5->{
+                            Toast.makeText(this, "サーバに問題があり、登録できませんでした。", Toast.LENGTH_LONG).show()
+                            bool = false
+                        }
+                        6->{
+                            Toast.makeText(this, "入力した値がおかしいです", Toast.LENGTH_LONG).show()
+                            bool = false
                         }
                     }
                 }
+                is Result.Failure -> {
+                    println("通信に失敗しました。")
+                }
+            }
+        }
         return bool
     }
     //検証
-    fun Validate(phone:String,mail:String,password:String,confpass:String):Boolean{
-        var result = true
-        if(!phone.matches("""^(070|080|090)-\d{4}-\d{4}$""".toRegex())){
-            result = false
-        }
-        if(!mail.matches("""/^[a-zA-Z0-9.!#${'$'}%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*${'$'}/""".toRegex())){
-            result = false
-        }
-        if(!password.equals(confpass)){
-            result = false
-        }
-        if(!password.matches("""^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!-/:-@[-`{-~])[!-~]{8,48}${'$'}""".toRegex())){
-            result = false
-        }
-        return result
-    }
+//    fun Validate(phone:String,mail:String,password:String,confpass:String):Boolean{
+//        var result = true
+//        if(!phone.matches("""^(070|080|090)-\d{4}-\d{4}$""".toRegex())){
+//            result = false
+//        }
+//        if(!mail.matches("""/^[a-zA-Z0-9.!#${'$'}%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*${'$'}/""".toRegex())){
+//            result = false
+//        }
+//        if(!password.equals(confpass)){
+//            result = false
+//        }
+//        if(!password.matches("""^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!-/:-@[-`{-~])[!-~]{8,48}${'$'}""".toRegex())){
+//            result = false
+//        }
+//        return result
+//    }
 }

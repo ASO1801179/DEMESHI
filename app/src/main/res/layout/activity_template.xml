@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Template">
-
     <Button
         android:id="@+id/Back"
         android:layout_width="@dimen/BackBtnWidth"
@@ -18,55 +17,152 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Company"
+        android:id="@+id/Address"
         android:layout_width="@dimen/TemplateTextWidth"
         android:layout_height="@dimen/TemplateTextHeight"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
+        android:layout_marginTop="56dp"
+        android:gravity="left"
         android:text="@string/Company"
         android:textSize="@dimen/TemplateTextSize"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Individual" />
+        app:layout_constraintTop_toBottomOf="@+id/Template4" />
 
     <TextView
         android:id="@+id/Individual"
         android:layout_width="@dimen/TemplateTextWidth"
-        android:layout_height="@dimen/TemplateTextHeight"
+        android:layout_height="57dp"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="left"
         android:text="@string/Individual"
         android:textSize="@dimen/TemplateTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Back" />
 
-    <ImageView
-        android:id="@+id/TemplateInd"
-        android:layout_width="@dimen/TemplateImgWidth"
-        android:layout_height="@dimen/TemplateImgHeight"
+    <TextView
+        android:id="@+id/mixer"
+        android:layout_width="@dimen/TemplateTextWidth"
+        android:layout_height="@dimen/TemplateTextHeight"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="left"
+        android:text="@string/mixer"
+        android:textSize="@dimen/TemplateTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Template1" />
+    <ImageView
+        android:id="@+id/Template1"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/Template2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Individual"
         app:srcCompat="@drawable/green" />
-
     <ImageView
-        android:id="@+id/templatePlace"
+        android:id="@+id/Template7"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Company"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
         app:srcCompat="@drawable/space" />
-
+    <ImageView
+        android:id="@+id/Template2"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/Template3"
+        app:layout_constraintTop_toBottomOf="@+id/Individual"
+        app:srcCompat="@drawable/f4796" />
+    <ImageView
+        android:id="@+id/Template3"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Individual"
+        app:srcCompat="@drawable/f4788" />
+    <ImageView
+        android:id="@+id/Template4"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mixer"
+        app:srcCompat="@drawable/f4786" />
+    <ImageView
+        android:id="@+id/Template5"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/Template4"
+        app:layout_constraintTop_toBottomOf="@+id/mixer"
+        app:srcCompat="@drawable/f4790" />
+    <ImageView
+        android:id="@+id/Template6"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toEndOf="@+id/Template5"
+        app:layout_constraintTop_toBottomOf="@+id/mixer"
+        app:srcCompat="@drawable/f4791" />
+    <ImageView
+        android:id="@+id/Template8"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/Template7"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
+        app:srcCompat="@drawable/f4782" />
+    <ImageView
+        android:id="@+id/Template9"
+        android:layout_width="@dimen/TemplateImgWidth"
+        android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toEndOf="@+id/Template8"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
+        app:srcCompat="@drawable/f4792" />
 </android.support.constraint.ConstraintLayout>

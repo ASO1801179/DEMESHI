@@ -35,4 +35,9 @@
     <string name="UserConfigName">ユーザー設定</string>
     <string name="DeleteName">退会</string>
     <string name="ReConfigBtnText">変更する</string>
+    <string name="mixer">企業用個人</string>
+    <string name="AddressHint">住所</string>
+    <string name="CompanyNameHint">企業名</string>
+    <string name="CompanyId">企業ID</string>
+    <string name="CompanyPass">企業パスワード</string>
 </resources>

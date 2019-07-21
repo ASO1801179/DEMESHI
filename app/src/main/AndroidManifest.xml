@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.ac.asojuku.st.demeshi">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -30,7 +31,12 @@
         <activity android:name=".ShowMyCard" />
         <activity android:name=".Template" />
         <activity android:name=".CreateCard" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".CreateCompany" />
+        <activity android:name=".CreateIndividual" />
+        <activity android:name=".CompanyInfo" />
+        <activity android:name=".ShowIndividual" />
+        <activity android:name=".ShowIndCompany"></activity>
     </application>
 
 </manifest>

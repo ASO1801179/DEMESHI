@@ -7,98 +7,204 @@
     tools:context=".HaveCardList">
 
     <Button
-        android:id="@+id/PlaceSortBtn"
+        android:id="@+id/CallBtn2"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="40dp"
-        android:text="場所"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/MailBtn"
+        />
 
     <Button
-        android:id="@+id/PersonSortBtn"
+        android:id="@+id/CallBtn3"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="個人"
-        app:layout_constraintEnd_toStartOf="@+id/PlaceSortBtn"
-        app:layout_constraintHorizontal_bias="0.969"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MailBtn2" />
+
+    <Button
+        android:id="@+id/CallBtn4"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MailBtn3" />
 
     <Button
         android:id="@+id/MailBtn"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/Mail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/CompanyName"
         app:layout_constraintTop_toBottomOf="@+id/CallBtn" />
+
+    <Button
+        android:id="@+id/MailBtn2"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn2" />
+
+    <Button
+        android:id="@+id/MailBtn3"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn3" />
+
+    <Button
+        android:id="@+id/MailBtn4"
+        android:layout_width="@dimen/ListBtnWidth"
+        android:layout_height="@dimen/ListBtnHeight"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn4" />
 
     <ImageView
         android:id="@+id/HaveCard"
         android:layout_width="@dimen/CardListWidth"
         android:layout_height="@dimen/CardListHeight"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/meishi" />
 
-    <TextView
-        android:id="@+id/CompanyName"
-        android:layout_width="@dimen/CardListTextWidth"
-        android:layout_height="@dimen/CardListTextHeight"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="4dp"
-        android:text="企業名"
-        android:textSize="@dimen/ListTextSize"
+    <ImageView
+        android:id="@+id/HaveCard2"
+        android:layout_width="@dimen/CardListWidth"
+        android:layout_height="130dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toEndOf="@+id/MyCard"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HaveCard"
+        app:srcCompat="@drawable/meishi" />
+
+    <ImageView
+        android:id="@+id/HaveCard3"
+        android:layout_width="@dimen/CardListWidth"
+        android:layout_height="130dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HaveCard2"
+        app:srcCompat="@drawable/meishi" />
+
+    <ImageView
+        android:id="@+id/HaveCard4"
+        android:layout_width="@dimen/CardListWidth"
+        android:layout_height="130dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HaveCard3"
+        app:srcCompat="@drawable/meishi" />
 
     <TextView
         android:id="@+id/Name"
-        android:layout_width="@dimen/CardListTextWidth"
-        android:layout_height="@dimen/CardListTextHeight"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/ListNameWidth"
+        android:layout_height="@dimen/ListNameHeight"
+        android:layout_marginEnd="156dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="156dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="36dp"
+        android:gravity="left|center"
         android:text="名前"
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/MyCard"
+        app:layout_constraintStart_toEndOf="@+id/HaveCard"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Name2"
+        android:layout_width="@dimen/ListNameWidth"
+        android:layout_height="@dimen/ListNameHeight"
+        android:layout_marginEnd="144dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:gravity="left|center"
+        android:text="名前"
+        android:textSize="@dimen/ListTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/MyCard2"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Name3"
+        android:layout_width="@dimen/ListNameWidth"
+        android:layout_height="@dimen/ListNameHeight"
+        android:layout_marginEnd="144dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:gravity="left|center"
+        android:text="名前"
+        android:textSize="@dimen/ListTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/MyCard2"
+        app:layout_constraintTop_toBottomOf="@+id/Name2" />
+
+    <TextView
+        android:id="@+id/Name4"
+        android:layout_width="@dimen/ListNameWidth"
+        android:layout_height="@dimen/ListNameHeight"
+        android:layout_marginEnd="144dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:gravity="left|center"
+        android:text="名前"
+        android:textSize="@dimen/ListTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/MyCard2"
+        app:layout_constraintTop_toBottomOf="@+id/Name3" />
 
     <Button
         android:id="@+id/CallBtn"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="36dp"
         android:text="@string/Phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Name"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -131,17 +237,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/mycard" />
 
-    <ImageButton
-        android:id="@+id/AddInd"
-        android:layout_width="@dimen/AddBtnFrame"
-        android:layout_height="@dimen/AddBtnFrame"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="476dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MailBtn"
-        app:srcCompat="@drawable/add" />
 
 </android.support.constraint.ConstraintLayout>

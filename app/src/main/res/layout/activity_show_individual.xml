@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowCompany"
-    tools:layout_editor_absoluteY="89dp">
+    tools:context=".ShowIndividual">
 
     <ImageView
         android:id="@+id/MyCard"
@@ -24,7 +23,7 @@
         app:srcCompat="@drawable/meishi" />
 
     <TextView
-        android:id="@+id/CompanyName"
+        android:id="@+id/Name"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginTop="40dp"
@@ -35,48 +34,48 @@
         app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MyCard"
-        tools:text="会社名" />
-
-    <TextView
-        android:id="@+id/Address"
-        android:layout_width="@dimen/TextWidth"
-        android:layout_height="@dimen/TextHeight"
-        android:layout_marginLeft="28dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="80dp"
-        android:text="TextView"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyName"
-        tools:text="住所" />
+        tools:text="名前" />
 
     <TextView
         android:id="@+id/PhoneNumber"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name"
+        tools:text="@string/PhoneHint" />
+
+    <TextView
+        android:id="@+id/MailAddress"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
         android:layout_marginLeft="44dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address"
-        tools:text="電話番号" />
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
+        tools:text="@string/MailHint" />
 
     <TextView
-        android:id="@+id/MaiAddress"
+        android:id="@+id/Address"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
-        tools:text="メールアドレス" />
+        app:layout_constraintTop_toBottomOf="@+id/MailAddress"
+        tools:text="@string/AddressHint" />
 
     <Button
         android:id="@+id/CallBtn"
@@ -94,7 +93,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/BackBtn"
@@ -103,8 +102,35 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="戻る"
+        android:text="@string/BackHint"
         android:textSize="@dimen/BackBtnTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="@dimen/DeleteBtnWidth"
+        android:layout_height="@dimen/DeleteBtnHeight"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/DeleteHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CardId"
+        android:layout_width="@dimen/TextWidth"
+        android:layout_height="@dimen/TextHeight"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Address" />
+
 </android.support.constraint.ConstraintLayout>

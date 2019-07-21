@@ -14,7 +14,8 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        LoginBtn.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
+        //LoginBtn.setOnClickListener{Login()}
+        LoginBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
         RegisterBtn.setOnClickListener{startActivity(Intent(it.context,Register::class.java))}
         ForgotBtn.setOnClickListener{startActivity(Intent(it.context,ForgotPassword::class.java))}
     }
@@ -47,23 +48,22 @@ class Login : AppCompatActivity() {
         val pair = listOf<Pair<String,String>>(user_name,user_password)
         val URL:String = "http://18001187.pupu.jp/untitled/public/user/login"
         var user_id = 0
-        URL.httpGet(pair)
-                .responseJson() { request, response, result ->
-                    when (result) {
-                        is Result.Success -> {
-                            // レスポンスボディを表示
-                            val json = result.value.obj()
-                            val results = json.get("result")// as JSONArray
-                            if(results == 1){
-                                user_id = json.get("user_id").toString().toInt()
-                                Toast.makeText(this, "ログインしました", Toast.LENGTH_LONG).show()
-                            }
-                        }
-                        is Result.Failure -> {
-                            println("通信に失敗しました。")
-                        }
+        URL.httpGet(pair).responseJson() { request, response, result ->
+            when (result) {
+                is Result.Success -> {
+                    // レスポンスボディを表示
+                    val json = result.value.obj()
+                    val results = json.get("result")// as JSONArray
+                    if(results == 1){
+                        user_id = json.get("user_id").toString().toInt()
+                        Toast.makeText(this, "ログインしました", Toast.LENGTH_LONG).show()
                     }
                 }
+                is Result.Failure -> {
+                    println("通信に失敗しました。")
+                }
+            }
+        }
         return user_id
     }
 }
