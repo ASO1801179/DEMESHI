@@ -12,15 +12,19 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_my_card_list.*
+import org.json.JSONArray
+import org.json.JSONObject
 
 class MyCardList : AppCompatActivity() {
 
-    val user_id = intent.getIntExtra("UserId",0)
+    var user_id = 0
     var card_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_card_list)
+
+        user_id = intent.getIntExtra("UserId",0)
 
         //何もしない（念のため用意しただけ）
         MyCardBtn.setOnClickListener{
@@ -107,18 +111,23 @@ class MyCardList : AppCompatActivity() {
 
     //作成した名刺一覧
     fun GetMyCard(){
-        val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget"
-        //val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget/" + user_id
-        URL.httpGet(listOf("user_id" to user_id)).responseJson() { request, response, result ->
+        //val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget"
+        val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget/" + user_id.toString()
+        println(URL)
+        URL.httpGet().responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
-                    val json = result.value.obj()
-                    val results = json.get("result")// as JSONArray
-                    if(results == 1){
-                        //取得したもので処理
-                        //名刺ごとの名刺IDをintentでShowMyCardに渡す
-                    }
+                    val json = result.value.array()
+                    val jsona = json[0] as JSONObject
+                    print(jsona.get("meisi_id"))
+                    println("!!")
+//                    val json = result.value.obj()
+//                    val results = json.get("result")// as JSONArray
+//                    if(results == 1){
+//                        //取得したもので処理
+//                        //名刺ごとの名刺IDをintentでShowMyCardに渡す
+//                    }
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
