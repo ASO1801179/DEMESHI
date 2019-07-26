@@ -40,7 +40,7 @@ class Register : AppCompatActivity() {
                 if(bool){
                     startActivity(intent)
                 }
-            },5000)
+            },1000)
 //            if(Validate(phone,mail,pass,confpass)){
 //                Signal(name,phone,mail,pass)
 //                startActivity(intent)

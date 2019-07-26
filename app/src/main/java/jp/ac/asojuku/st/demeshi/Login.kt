@@ -21,7 +21,9 @@ class Login : AppCompatActivity() {
         LoginBtn.setOnClickListener{Login()}
         //LoginBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
         RegisterBtn.setOnClickListener{startActivity(Intent(it.context,Register::class.java))}
-        ForgotBtn.setOnClickListener{startActivity(Intent(it.context,ForgotPassword::class.java))}
+        ForgotBtn.setOnClickListener{
+            Toast.makeText(this, "DEMESHIの次回作にご期待ください", Toast.LENGTH_LONG).show()
+        }
     }
     fun Login(){
         val intent = Intent(this,MyCardList::class.java)
