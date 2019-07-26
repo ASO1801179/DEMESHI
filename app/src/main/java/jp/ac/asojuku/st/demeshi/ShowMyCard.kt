@@ -21,7 +21,11 @@ class ShowMyCard : AppCompatActivity() {
         user_id = intent.getIntExtra("UserId",0)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_my_card)
-        BackBtn.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
+        BackBtn.setOnClickListener{
+            val intent = Intent(this,MyCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         Delete.setOnClickListener{Delete()}
         getDetail()
     }

@@ -21,9 +21,21 @@ class PhotoCard : AppCompatActivity() {
         user_id = intent.getIntExtra("UserId",0)
         card_id = intent.getIntExtra("CardId",0)
         setContentView(R.layout.activity_photo_card)
-        MyCardBtn.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
-        HaveCardBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
-        PhotoCardBtn.setOnClickListener{startActivity(Intent(it.context,PhotoCard::class.java))}
+        MyCardBtn.setOnClickListener{
+            val intent = Intent(this,MyCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
+        HaveCardBtn.setOnClickListener{
+            val intent = Intent(this,HaveCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
+        PhotoCardBtn.setOnClickListener{
+            val intent = Intent(this,PhotoCard::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         AddBtn.setOnClickListener{add()}
     }
     fun add(){

@@ -14,7 +14,11 @@ class Template : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_template)
         user_id = intent.getIntExtra("UserId",0)
-        Back.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
+        Back.setOnClickListener{
+            val intent = Intent(this,MyCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         Template1.setOnClickListener{Create(1)}
         Template2.setOnClickListener{Create(2)}
         Template3.setOnClickListener{Create(3)}

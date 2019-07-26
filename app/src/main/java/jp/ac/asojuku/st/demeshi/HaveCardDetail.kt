@@ -16,7 +16,11 @@ class HaveCardDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_have_card_detail)
-        Back.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
+        Back.setOnClickListener{
+            val intent = Intent(this,HaveCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         Delete.setOnClickListener {
             AlertDialog.Builder(this).apply {
                 setTitle("名刺削除")
