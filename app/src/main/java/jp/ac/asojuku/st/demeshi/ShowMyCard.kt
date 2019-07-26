@@ -10,16 +10,20 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_show_my_card.*
+import org.json.JSONObject
 
 class ShowMyCard : AppCompatActivity() {
 
-    val user_id = intent.getIntExtra("UserId",0)
+    var user_id = 0
+    var card_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        user_id = intent.getIntExtra("UserId",0)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_my_card)
         BackBtn.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
         Delete.setOnClickListener{Delete()}
+        getDetail()
     }
     fun Delete(){
         AlertDialog.Builder(this).apply {
@@ -53,4 +57,30 @@ class ShowMyCard : AppCompatActivity() {
     }
     //名刺IDを表示
     //CardId.text = intent.getIntentExtra("CardId",0)
+    fun getDetail(){
+        val URL:String = "http://18001187.pupu.jp/untitled/public/card/infomation/" + card_id.toString()
+        URL.httpGet().responseJson() { request, response, result ->
+            when (result) {
+                is Result.Success -> {
+                    // レスポンスボディを表示
+                    val json = result.value.array()
+                    for(i in 0..json.length()){
+
+                    }
+//                    val jsona = json[0] as JSONObject
+//                    print(jsona.get("meisi_id"))
+//                    println("!!")
+//                    val json = result.value.obj()
+//                    val results = json.get("result")// as JSONArray
+//                    if(results == 1){
+//                        //取得したもので処理
+//                        //名刺ごとの名刺IDをintentでShowMyCardに渡す
+//                    }
+                }
+                is Result.Failure -> {
+                    println("通信に失敗しました。")
+                }
+            }
+        }
+    }
 }

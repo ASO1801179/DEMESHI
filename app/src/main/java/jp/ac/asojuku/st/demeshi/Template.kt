@@ -14,14 +14,14 @@ class Template : AppCompatActivity() {
         setContentView(R.layout.activity_template)
         Back.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
         Template1.setOnClickListener{Create(1)}
-        Template1.setOnClickListener{Create(2)}
-        Template1.setOnClickListener{Create(3)}
-        Template1.setOnClickListener{Create(4)}
-        Template1.setOnClickListener{Create(5)}
-        Template1.setOnClickListener{Create(6)}
-        Template1.setOnClickListener{Create(7)}
-        Template1.setOnClickListener{Create(8)}
-        Template1.setOnClickListener{Create(9)}
+        Template2.setOnClickListener{Create(2)}
+        Template3.setOnClickListener{Create(3)}
+        Template4.setOnClickListener{Create(4)}
+        Template5.setOnClickListener{Create(5)}
+        Template6.setOnClickListener{Create(6)}
+        Template7.setOnClickListener{Create(7)}
+        Template8.setOnClickListener{Create(8)}
+        Template9.setOnClickListener{Create(9)}
     }
     fun Create(num:Int){
         when((num-1)/3){

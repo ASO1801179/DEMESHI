@@ -12,8 +12,11 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_my_card_list.*
-import org.json.JSONArray
 import org.json.JSONObject
+import android.R.drawable.*
+import android.widget.TextView
+import jp.ac.asojuku.st.demeshi.R.drawable.*
+import jp.ac.asojuku.st.demeshi.R.id.*
 
 class MyCardList : AppCompatActivity() {
 
@@ -45,13 +48,49 @@ class MyCardList : AppCompatActivity() {
             intent.putExtra("UserId",user_id)
             startActivity(intent)
         }
-        MyCard.setOnClickListener{
+        MyCard1.setOnClickListener{
             val intent = Intent(this,ShowMyCard::class.java)
             intent.putExtra("UserId",user_id)
             intent.putExtra("CardId",card_id)
             startActivity(intent)
         }
-        CompanyName.setOnClickListener{
+        Name1.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        MyCard2.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        Name2.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        MyCard3.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        Name3.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        MyCard4.setOnClickListener{
+            val intent = Intent(this,ShowMyCard::class.java)
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
+            startActivity(intent)
+        }
+        Name4.setOnClickListener{
             val intent = Intent(this,ShowMyCard::class.java)
             intent.putExtra("UserId",user_id)
             intent.putExtra("CardId",card_id)
@@ -112,16 +151,49 @@ class MyCardList : AppCompatActivity() {
     //作成した名刺一覧
     fun GetMyCard(){
         //val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget"
+        val NameArray = arrayOf(R.id.Name1, R.id.Name2,R.id.Name3, R.id.Name4)
+        val MyCardArray = arrayOf(MyCard1,MyCard2,MyCard3,MyCard4)
+        val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+        val CallArray = arrayOf(CallBtn1,CallBtn2,CallBtn3,CallBtn4)
+        val MailArray = arrayOf(MailBtn1,MailBtn2,MailBtn3,MailBtn4)
+
         val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget/" + user_id.toString()
-        println(URL)
         URL.httpGet().responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     val json = result.value.array()
-                    val jsona = json[0] as JSONObject
-                    print(jsona.get("meisi_id"))
-                    println("!!")
+                    var cnt = 0
+                    var name = ""
+                    var NameText:TextView
+                    var TemplateId = 0
+                    for(i in 0..(json.length())){
+                        cnt++
+                        name = (json[i] as JSONObject).get("value").toString()
+                        NameText = findViewById(NameArray[i]) as TextView
+                        NameText.setText(name)
+                        TemplateId = (json[i] as JSONObject).get("template_id").toString().toInt()
+                        MyCardArray[i].setImageResource(ImgArray[TemplateId])
+                        if(i==3){
+                            break
+                        }
+                    }
+                    for(i in 3..cnt -1){
+                        //力技（実質）動的リスト化
+                        MyCardArray[i].setImageResource(screen_background_light)
+                        NameText = findViewById(NameArray[i]) as TextView
+                        NameText.text = ""
+                        CallArray[i].text = ""
+                        CallArray[i].background = null
+                        MailArray[i].text = ""
+                        MailArray[i].background = null
+//                        MyCard2.setImageResource(screen_background_light)
+//                        Name2.text = ""
+//                        CallBtn2.text = ""
+//                        CallBtn2.background = null
+//                        MailBtn2.text = ""
+//                        MailBtn2.background = null
+                    }
 //                    val json = result.value.obj()
 //                    val results = json.get("result")// as JSONArray
 //                    if(results == 1){

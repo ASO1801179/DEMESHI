@@ -8,7 +8,6 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import jp.ac.asojuku.st.demeshi.R.drawable.*
-import jp.ac.asojuku.st.demeshi.R.id.BackDesign
 import kotlinx.android.synthetic.main.activity_create_card.*
 
 class CreateCard : AppCompatActivity() {
@@ -31,7 +30,7 @@ class CreateCard : AppCompatActivity() {
                 BackDesign.setImageResource(f4788)
             }
         }
-        Name.bringToFront()
+        Name1.bringToFront()
         Phone.bringToFront()
         Mail.bringToFront()
         Address.bringToFront()
@@ -39,7 +38,7 @@ class CreateCard : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Name.text = EditName.text
+        Name1.text = EditName.text
         Phone.text = EditPhone.text
         Mail.text = EditMail.text
         Address.text = EditAddress.text
@@ -49,7 +48,7 @@ class CreateCard : AppCompatActivity() {
         val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert"
         //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
         val userId = Pair("user_id",user_id.toString())
-        val name = Pair("name",Name.text.toString())
+        val name = Pair("name",Name1.text.toString())
         val phone = Pair("phone",Phone.text.toString())
         val mailaddress = Pair("mailaddress",Mail.text.toString())
         val number = Pair("number",Address.text.toString())

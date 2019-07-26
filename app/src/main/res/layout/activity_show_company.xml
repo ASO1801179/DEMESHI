@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="89dp">
 
     <ImageView
-        android:id="@+id/MyCard"
+        android:id="@+id/MyCard1"
         android:layout_width="@dimen/MyCardWidth"
         android:layout_height="@dimen/MyCardHeight"
         android:layout_marginEnd="12dp"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MyCard"
+        app:layout_constraintTop_toBottomOf="@+id/MyCard1"
         tools:text="会社名" />
 
     <TextView
@@ -79,7 +79,7 @@
         tools:text="メールアドレス" />
 
     <Button
-        android:id="@+id/CallBtn"
+        android:id="@+id/CallBtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"

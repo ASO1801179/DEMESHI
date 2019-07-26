@@ -36,13 +36,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/mycard" />
 
-    <Button
-        android:id="@+id/Camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="カメラ起動"
+    <EditText
+        android:id="@+id/Card_id"
+        android:layout_width="@dimen/TextBoxWidth"
+        android:layout_height="@dimen/TextBoxHeight"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/AddHint"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/TextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/AddBtn"
+        android:layout_width="@dimen/BtnWidth"
+        android:layout_height="@dimen/BtnHeight"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/AddBtnHint"
+        android:textSize="@dimen/BtnTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/HaveCardBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Card_id" />
+
 </android.support.constraint.ConstraintLayout>

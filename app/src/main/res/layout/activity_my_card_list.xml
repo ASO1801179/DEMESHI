@@ -15,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:text="@string/Phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MailBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MailBtn1"
         />
 
     <Button
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/MailBtn3" />
 
     <Button
-        android:id="@+id/MailBtn"
+        android:id="@+id/MailBtn1"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
         android:layout_marginEnd="25dp"
@@ -49,7 +49,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/Mail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CallBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn1" />
 
     <Button
         android:id="@+id/MailBtn2"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/CallBtn4" />
 
     <ImageView
-        android:id="@+id/MyCard"
+        android:id="@+id/MyCard1"
         android:layout_width="@dimen/CardListWidth"
         android:layout_height="@dimen/CardListHeight"
         android:layout_marginTop="36dp"
@@ -103,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MyCard"
+        app:layout_constraintTop_toBottomOf="@+id/MyCard1"
         app:srcCompat="@drawable/meishi" />
 
     <ImageView
@@ -129,7 +129,7 @@
         app:srcCompat="@drawable/meishi" />
 
     <TextView
-        android:id="@+id/CompanyName"
+        android:id="@+id/Name1"
         android:layout_width="@dimen/ListNameWidth"
         android:layout_height="@dimen/ListNameHeight"
         android:layout_marginEnd="144dp"
@@ -142,7 +142,7 @@
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/MyCard"
+        app:layout_constraintStart_toEndOf="@+id/MyCard1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -160,7 +160,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/MyCard2"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyName" />
+        app:layout_constraintTop_toBottomOf="@+id/Name1" />
 
     <TextView
         android:id="@+id/Name3"
@@ -197,7 +197,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Name3" />
 
     <Button
-        android:id="@+id/CallBtn"
+        android:id="@+id/CallBtn1"
         android:layout_width="@dimen/ListBtnWidth"
         android:layout_height="@dimen/ListBtnHeight"
         android:layout_marginEnd="24dp"

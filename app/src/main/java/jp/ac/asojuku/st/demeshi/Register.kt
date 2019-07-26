@@ -3,6 +3,7 @@ package jp.ac.asojuku.st.demeshi
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
@@ -16,6 +17,7 @@ class Register : AppCompatActivity() {
 //    var mail = ""
 //    var pass = ""
 //    var confpass = ""
+    var bool = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +35,12 @@ class Register : AppCompatActivity() {
         val pass = Password.text.toString()
         val confpass = ConfPassword.text.toString()
         if(!name.isEmpty() and !phone.isEmpty() and !mail.isEmpty() and !pass.isEmpty() and !confpass.isEmpty()){
-            if(Signal(name,phone,mail,pass)){
-                startActivity(intent)
-            }
+            Signal(name,phone,mail,pass)
+            Handler().postDelayed(Runnable{
+                if(bool){
+                    startActivity(intent)
+                }
+            },5000)
 //            if(Validate(phone,mail,pass,confpass)){
 //                Signal(name,phone,mail,pass)
 //                startActivity(intent)
@@ -48,7 +53,7 @@ class Register : AppCompatActivity() {
     }
 
     //登録処理
-    fun Signal(name:String,phone:String,mail:String,pass:String):Boolean{
+    fun Signal(name:String,phone:String,mail:String,pass:String){
         // 非同期処理
         val username = Pair("user_name", name)
         val password = Pair("user_password",pass)
@@ -56,7 +61,6 @@ class Register : AppCompatActivity() {
         val number = Pair("phone_number",phone)
         val pair = listOf<Pair<String,String>>(username,password,mailaddress,number)
         val URL:String = "http://18001187.pupu.jp/untitled/public/user/insert"
-        var bool:Boolean = true
         URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
@@ -94,7 +98,6 @@ class Register : AppCompatActivity() {
                 }
             }
         }
-        return bool
     }
     //検証
 //    fun Validate(phone:String,mail:String,password:String,confpass:String):Boolean{
