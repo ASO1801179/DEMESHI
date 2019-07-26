@@ -15,7 +15,7 @@ import org.json.JSONObject
 class HaveCardList : AppCompatActivity() {
 
     var user_id = 0
-    var card_id = 0
+    var CardId = arrayOf(0,0,0,0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -39,49 +39,49 @@ class HaveCardList : AppCompatActivity() {
         HaveCard1.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[1])
             startActivity(intent)
         }
         Name1.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[1])
             startActivity(intent)
         }
         HaveCard2.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[2])
             startActivity(intent)
         }
         Name2.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[2])
             startActivity(intent)
         }
         HaveCard3.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[3])
             startActivity(intent)
         }
         Name3.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[3])
             startActivity(intent)
         }
         HaveCard4.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[4])
             startActivity(intent)
         }
         Name4.setOnClickListener{
             val intent = Intent(this,HaveCardDetail::class.java)
             intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",card_id)
+            intent.putExtra("CardId",CardId[4])
             startActivity(intent)
         }
 
@@ -120,6 +120,7 @@ class HaveCardList : AppCompatActivity() {
                         NameText.setText(name)
                         TemplateId = (json[i] as JSONObject).get("template_id").toString().toInt()
                         HaveCardArray[i].setImageResource(ImgArray[TemplateId])
+                        CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
                         if(i==3){
                             break
                         }

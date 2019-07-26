@@ -7,11 +7,13 @@ import kotlinx.android.synthetic.main.activity_template.*
 
 class Template : AppCompatActivity() {
 
-    val user_id = intent.getIntExtra("UserId",0)
+
+    var user_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_template)
+        user_id = intent.getIntExtra("UserId",0)
         Back.setOnClickListener{startActivity(Intent(it.context,MyCardList::class.java))}
         Template1.setOnClickListener{Create(1)}
         Template2.setOnClickListener{Create(2)}
