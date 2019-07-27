@@ -171,7 +171,7 @@ class HaveCardList : AppCompatActivity() {
                         NameText = findViewById(NameArray[i]) as TextView
                         NameText.setText(name)
                         TemplateId = (json[i] as JSONObject).get("img").toString().toInt()
-                        HaveCardArray[i].setImageResource(ImgArray[TemplateId])
+                        HaveCardArray[i].setImageResource(ImgArray[TemplateId-1])
                         CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
                         CompanyFlag[i] = (json[i] as JSONObject).get("flag").toString().toInt()
                         if(i==3){

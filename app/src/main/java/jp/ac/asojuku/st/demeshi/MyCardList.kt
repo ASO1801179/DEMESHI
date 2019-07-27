@@ -231,7 +231,7 @@ class MyCardList : AppCompatActivity() {
                         NameText = findViewById(NameArray[i]) as TextView
                         NameText.setText(name)
                         TemplateId = (json[i] as JSONObject).get("img").toString().toInt()
-                        MyCardArray[i].setImageResource(ImgArray[TemplateId])
+                        MyCardArray[i].setImageResource(ImgArray[TemplateId-1])
                         CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
                         //企業個人が1,完全個人0
                         CompanyFlag[i] = (json[i] as JSONObject).get("flag").toString().toInt()

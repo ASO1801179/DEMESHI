@@ -38,8 +38,11 @@ class PhotoCard : AppCompatActivity() {
     }
     fun add(){
         val card_id = AddBtn.text.toString()
-        val URL:String = "http://18001187.pupu.jp/untitled/public/user/card/insert/"+user_id.toString() + "/" + card_id
-        URL.httpGet().responseJson() { request, response, result ->
+        val UserId = Pair("user_id", user_id.toString())
+        val CardId = Pair("meisi_id", card_id)
+        val pair = listOf<Pair<String,String>>(UserId,CardId)
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/card/collection"
+        URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success->{
                     // レスポンスボディを表示
