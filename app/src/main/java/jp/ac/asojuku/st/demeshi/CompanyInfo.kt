@@ -48,7 +48,6 @@ class CompanyInfo : AppCompatActivity() {
         }
     }
     fun Signal(){
-        var bool = true
         val company_id = Pair("company_id", CompanyID.toString())
         val company_password = Pair("company_password", CompanyPass.toString())
         val URL:String = "http://18001187.pupu.jp/untitled/public/user/login"

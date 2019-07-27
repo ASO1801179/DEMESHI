@@ -16,6 +16,8 @@ class HaveCardList : AppCompatActivity() {
 
     var user_id = 0
     var CardId = arrayOf(0,0,0,0)
+    //完全個人0
+    var CompanyFlag = arrayOf(0,0,0,0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -29,7 +31,9 @@ class HaveCardList : AppCompatActivity() {
             startActivity(intent)
         }
         HaveCardBtn.setOnClickListener{
-            startActivity(Intent(it.context,HaveCardList::class.java))
+            val intent = Intent(this,HaveCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
         }
         PhotoCardBtn.setOnClickListener{
             val intent = Intent(this,PhotoCard::class.java)
@@ -37,61 +41,109 @@ class HaveCardList : AppCompatActivity() {
             startActivity(intent)
         }
         HaveCard1.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[1])
-            startActivity(intent)
+            if(CompanyFlag[0] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[0])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[0])
+                startActivity(intent)
+            }
         }
         Name1.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[1])
-            startActivity(intent)
+            if(CompanyFlag[0] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[0])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[0])
+                startActivity(intent)
+            }
         }
         HaveCard2.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[2])
-            startActivity(intent)
+            if(CompanyFlag[1] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[1])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[1])
+                startActivity(intent)
+            }
         }
         Name2.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[2])
-            startActivity(intent)
+            if(CompanyFlag[1] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[1])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[1])
+                startActivity(intent)
+            }
         }
         HaveCard3.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[3])
-            startActivity(intent)
+            if(CompanyFlag[2] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[2])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[2])
+                startActivity(intent)
+            }
         }
         Name3.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[3])
-            startActivity(intent)
+            if(CompanyFlag[2] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[2])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[2])
+                startActivity(intent)
+            }
         }
         HaveCard4.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[4])
-            startActivity(intent)
+            if(CompanyFlag[3] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[3])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[3])
+                startActivity(intent)
+            }
         }
         Name4.setOnClickListener{
-            val intent = Intent(this,HaveCardDetail::class.java)
-            intent.putExtra("UserId",user_id)
-            intent.putExtra("CardId",CardId[4])
-            startActivity(intent)
+            if(CompanyFlag[3] == 0){
+                val intent = Intent(this,HaveCardIndividual::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[3])
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,HaveCardDetail::class.java)
+                intent.putExtra("UserId",user_id)
+                intent.putExtra("CardId",CardId[3])
+                startActivity(intent)
+            }
         }
-
-        //力技（実質）動的リスト化
-//        MyCard2.setImageResource(screen_background_light)
-//        Name2.text = ""
-//        CallBtn2.text = ""
-//        CallBtn2.background = null
-//        MailBtn2.text = ""
-//        MailBtn2.background = null
         GetMyCard()
     }
 
@@ -103,8 +155,8 @@ class HaveCardList : AppCompatActivity() {
         val CallArray = arrayOf(CallBtn1,CallBtn2,CallBtn3,CallBtn4)
         val MailArray = arrayOf(MailBtn1,MailBtn2,MailBtn3,MailBtn4)
 
-        val URL:String = "http://18001187.pupu.jp/untitled/public/card/collection_return/" + user_id.toString()
-        URL.httpGet().responseJson() { request, response, result ->
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/list/others_card"
+        URL.httpGet(listOf("user_id" to user_id)).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
@@ -113,40 +165,31 @@ class HaveCardList : AppCompatActivity() {
                     var name = ""
                     var NameText: TextView
                     var TemplateId = 0
-                    for(i in 0..(json.length())){
+                    for(i in 0..(json.length()-1)){
                         cnt++
-                        name = (json[i] as JSONObject).get("value").toString()
+                        name = (json[i] as JSONObject).get("name").toString()
                         NameText = findViewById(NameArray[i]) as TextView
                         NameText.setText(name)
-                        TemplateId = (json[i] as JSONObject).get("template_id").toString().toInt()
+                        TemplateId = (json[i] as JSONObject).get("img").toString().toInt()
                         HaveCardArray[i].setImageResource(ImgArray[TemplateId])
                         CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
+                        CompanyFlag[i] = (json[i] as JSONObject).get("flag").toString().toInt()
                         if(i==3){
                             break
                         }
                     }
-                    for(i in 3..cnt -1){
-                        //力技（実質）動的リスト化
-                        HaveCardArray[i].setImageResource(screen_background_light)
-                        NameText = findViewById(NameArray[i]) as TextView
-                        NameText.text = ""
-                        CallArray[i].text = ""
-                        CallArray[i].background = null
-                        MailArray[i].text = ""
-                        MailArray[i].background = null
-//                        MyCard2.setImageResource(screen_background_light)
-//                        Name2.text = ""
-//                        CallBtn2.text = ""
-//                        CallBtn2.background = null
-//                        MailBtn2.text = ""
-//                        MailBtn2.background = null
+                    if(cnt != 4) {
+                        for (i in 0..(3-cnt)) {
+                            //力技（実質）動的リスト化
+                            HaveCardArray[3-i].setImageResource(screen_background_light)
+                            NameText = findViewById(NameArray[3-i]) as TextView
+                            NameText.text = ""
+                            CallArray[3-i].text = ""
+                            CallArray[3-i].background = null
+                            MailArray[3-i].text = ""
+                            MailArray[3-i].background = null
+                        }
                     }
-//                    val json = result.value.obj()
-//                    val results = json.get("result")// as JSONArray
-//                    if(results == 1){
-//                        //取得したもので処理
-//                        //名刺ごとの名刺IDをintentでShowMyCardに渡す
-//                    }
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

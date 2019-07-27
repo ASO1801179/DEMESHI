@@ -10,12 +10,15 @@ import kotlinx.android.synthetic.main.activity_have_card_detail.*
 
 class HaveCardDetail : AppCompatActivity() {
 
-    val user_id = intent.getIntExtra("UserId",0)
-    var card_id = intent.getIntExtra("CardId",0)
+    var user_id = 0
+    var card_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_have_card_detail)
+        user_id = intent.getIntExtra("UserId",0)
+        card_id = intent.getIntExtra("CardId",0)
+
         Back.setOnClickListener{
             val intent = Intent(this,HaveCardList::class.java)
             intent.putExtra("UserId",user_id)
@@ -31,7 +34,7 @@ class HaveCardDetail : AppCompatActivity() {
                         Toast.makeText(context, "削除しました", Toast.LENGTH_LONG).show()
                     }
                 })
-                setNegativeButton("キャンセル", null)
+                setNegativeButton("キャンセル    ", null)
                 show()
             }
         }

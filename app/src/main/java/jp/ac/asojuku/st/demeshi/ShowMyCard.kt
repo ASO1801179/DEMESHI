@@ -35,24 +35,7 @@ class ShowMyCard : AppCompatActivity() {
             setMessage("本当に名刺を削除しますか？")
             setPositiveButton("削除", DialogInterface.OnClickListener { _, _ ->
                 // OKをタップしたときの処理
-                val URL:String = "http://18001187.pupu.jp/untitled/public/user/login"
-                var user_id = 0
-//                URL.httpGet(pair).responseJson() { request, response, result ->
-//                    when (result) {
-//                        is Result.Success -> {
-//                            // レスポンスボディを表示
-//                            val json = result.value.obj()
-//                            val results = json.get("result")// as JSONArray
-//                            if(results == 1){
-//                                user_id = json.get("user_id").toString().toInt()
-//                                Toast.makeText(this, "ログインしました", Toast.LENGTH_LONG).show()
-//                            }
-//                        }
-//                        is Result.Failure -> {
-//                            println("通信に失敗しました。")
-//                        }
-//                    }
-//                }
+
                 Toast.makeText(context, "削除しました", Toast.LENGTH_LONG).show()
             })
             setNegativeButton("キャンセル", null)
@@ -68,18 +51,9 @@ class ShowMyCard : AppCompatActivity() {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     val json = result.value.array()
-                    for(i in 0..json.length()){
-
-                    }
-//                    val jsona = json[0] as JSONObject
-//                    print(jsona.get("meisi_id"))
-//                    println("!!")
-//                    val json = result.value.obj()
-//                    val results = json.get("result")// as JSONArray
-//                    if(results == 1){
-//                        //取得したもので処理
-//                        //名刺ごとの名刺IDをintentでShowMyCardに渡す
-//                    }
+                    Name1.text = (json[0] as JSONObject).get("value").toString()
+                    PhoneNumber.text = (json[3] as JSONObject).get("value").toString()
+                    MailAddress.text = (json[1] as JSONObject).get("value").toString()
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

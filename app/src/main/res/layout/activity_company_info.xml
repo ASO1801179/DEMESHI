@@ -39,7 +39,7 @@
         android:id="@+id/CompanyText"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="200dp"
         android:gravity="center"
         android:text="TextView"
         android:textSize="@dimen/TextSize"
