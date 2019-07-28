@@ -36,21 +36,25 @@ class Template : AppCompatActivity() {
                 val intent = Intent(this,CreateCard::class.java)
                 intent.putExtra("Image",num)
                 intent.putExtra("UserId",user_id)
+                intent.putExtra("company_name","株式会社小松菜")
+                intent.putExtra("company_id","h00ara")
                 startActivity(intent)
             }
             1->{
                 //CreateIndividual
-                val intent = Intent(this,CompanyInfo::class.java)
+                val intent = Intent(this,CreateIndividual::class.java)
                 intent.putExtra("Image",num)
-                intent.putExtra("Confirm","Individual")
                 intent.putExtra("UserId",user_id)
-            }
+                startActivity(intent)
+        }
             2->{
                 //CreateCompany
-                val intent = Intent(this,CompanyInfo::class.java)
+                val intent = Intent(this,CreateCard::class.java)
                 intent.putExtra("Image",num)
-                intent.putExtra("Confirm","Company")
                 intent.putExtra("UserId",user_id)
+                intent.putExtra("company_id","aaa")
+                intent.putExtra("company_password",12345)
+                startActivity(intent)
             }
         }
     }

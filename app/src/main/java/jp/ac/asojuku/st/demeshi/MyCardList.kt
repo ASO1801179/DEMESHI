@@ -157,7 +157,7 @@ class MyCardList : AppCompatActivity() {
         val CallArray = arrayOf(CallBtn1,CallBtn2,CallBtn3,CallBtn4)
         val MailArray = arrayOf(MailBtn1,MailBtn2,MailBtn3,MailBtn4)
 
-        val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget/" + user_id.toString()
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/list/create_card" + user_id.toString()
         URL.httpGet().responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {

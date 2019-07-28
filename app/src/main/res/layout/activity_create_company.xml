@@ -120,10 +120,10 @@
         android:id="@+id/Address"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="住所"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="28dp"
+        android:text="URL"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Mail" />
@@ -139,5 +139,18 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackDesign" />
 
 </android.support.constraint.ConstraintLayout>

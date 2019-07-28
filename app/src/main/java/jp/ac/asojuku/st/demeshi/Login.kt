@@ -52,7 +52,7 @@ class Login : AppCompatActivity() {
         val user_name = Pair("user_name", User_Name)
         val user_password = Pair("user_password", User_Password)
         val pair = listOf<Pair<String,String>>(user_name,user_password)
-        val URL:String = "http://18001187.pupu.jp/untitled/public/user/login"
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/user/login"
         URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
