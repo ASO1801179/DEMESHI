@@ -65,7 +65,7 @@
         tools:text="@string/MailHint" />
 
     <TextView
-        android:id="@+id/Address"
+        android:id="@+id/SNS"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginTop="40dp"
@@ -75,25 +75,7 @@
         app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MailAddress"
-        tools:text="@string/AddressHint" />
-
-    <Button
-        android:id="@+id/CallBtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="電話"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
+        tools:text="@string/SNSHint" />
 
     <Button
         android:id="@+id/BackBtn"
@@ -131,6 +113,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address" />
+        app:layout_constraintTop_toBottomOf="@+id/SNS" />
 
 </android.support.constraint.ConstraintLayout>

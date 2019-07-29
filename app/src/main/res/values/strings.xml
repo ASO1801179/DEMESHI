@@ -42,4 +42,5 @@
     <string name="CompanyPass">企業パスワード</string>
     <string name="AddHint">名刺IDを入力してください</string>
     <string name="AddBtnHint">追加</string>
+    <string name="SNSHint">SNS</string>
 </resources>

@@ -39,7 +39,7 @@
         tools:text="名前" />
 
     <TextView
-        android:id="@+id/PhoneNumber"
+        android:id="@+id/Mail"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginLeft="28dp"
@@ -51,10 +51,10 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name1"
-        tools:text="@string/PhoneHint" />
+        tools:text="@string/MailHint" />
 
     <TextView
-        android:id="@+id/MailAddress"
+        android:id="@+id/Phone"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginLeft="44dp"
@@ -63,11 +63,11 @@
         android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
-        tools:text="@string/MailHint" />
+        app:layout_constraintTop_toBottomOf="@+id/Mail"
+        tools:text="@string/PhoneHint" />
 
     <TextView
-        android:id="@+id/Address"
+        android:id="@+id/Company"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginTop="40dp"
@@ -76,8 +76,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MailAddress"
-        tools:text="@string/AddressHint" />
+        app:layout_constraintTop_toBottomOf="@+id/Phone"
+        tools:text="@string/CompanyHint" />
 
     <Button
         android:id="@+id/BackBtn"
@@ -110,11 +110,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:text="TextView"
+        android:text="名刺ID"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address" />
+        app:layout_constraintTop_toBottomOf="@+id/Company" />
 
 </android.support.constraint.ConstraintLayout>

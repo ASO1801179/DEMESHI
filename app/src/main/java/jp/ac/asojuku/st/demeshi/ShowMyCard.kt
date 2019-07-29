@@ -16,9 +16,11 @@ class ShowMyCard : AppCompatActivity() {
 
     var user_id = 0
     var card_id = 0
+    var company_id = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user_id = intent.getIntExtra("UserId",0)
+        card_id = intent.getIntExtra("CardId",0)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_my_card)
         BackBtn.setOnClickListener{
@@ -45,15 +47,36 @@ class ShowMyCard : AppCompatActivity() {
     //名刺IDを表示
     //CardId.text = intent.getIntentExtra("CardId",0)
     fun getDetail(){
-        val URL:String = "http://18001187.pupu.jp/untitled/public/card/infomation/" + card_id.toString()
-        URL.httpGet().responseJson() { request, response, result ->
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/card/detail"
+
+        URL.httpGet(listOf("meisi_id" to card_id)).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
-                    val json = result.value.array()
-                    Name1.text = (json[0] as JSONObject).get("value").toString()
-                    PhoneNumber.text = (json[3] as JSONObject).get("value").toString()
-                    MailAddress.text = (json[1] as JSONObject).get("value").toString()
+                    val jsons = result.value.array()
+                    val json = jsons[0] as JSONObject
+                    Name1.text = json.get("name").toString()
+                    Mail.text = json.get("address").toString()
+                    Phone.text = json.get("number").toString()
+                    CardId.text = card_id.toString()
+                    company_id = json.get("company_id").toString()
+                }
+                is Result.Failure -> {
+                    println("通信に失敗しました。")
+                }
+            }
+        }
+        val URL2:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/getData"
+
+        URL2.httpGet(listOf("company_id" to company_id)).responseJson() { request, response, result ->
+            when (result) {
+                is Result.Success -> {
+                    // レスポンスボディを表示
+                    val json = result.value.obj()
+                    val result = json.get("result")
+                    if(result == 1){
+                        Company.text = json.get("company_name").toString()
+                    }
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
