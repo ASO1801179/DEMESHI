@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
+import jp.ac.asojuku.st.demeshi.R.drawable.*
 import kotlinx.android.synthetic.main.activity_show_my_card.*
 import org.json.JSONObject
 
@@ -16,7 +17,8 @@ class ShowMyCard : AppCompatActivity() {
 
     var user_id = 0
     var card_id = 0
-    var company_id = ""
+    var company_id = 0
+    val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user_id = intent.getIntExtra("UserId",0)
@@ -30,6 +32,7 @@ class ShowMyCard : AppCompatActivity() {
         }
         Delete.setOnClickListener{Delete()}
         getDetail()
+        getCompany()
     }
     fun Delete(){
         AlertDialog.Builder(this).apply {
@@ -55,26 +58,31 @@ class ShowMyCard : AppCompatActivity() {
                     // レスポンスボディを表示
                     val jsons = result.value.array()
                     val json = jsons[0] as JSONObject
+                    var Templateid = 0
                     Name1.text = json.get("name").toString()
                     Mail.text = json.get("address").toString()
                     Phone.text = json.get("number").toString()
                     CardId.text = card_id.toString()
-                    company_id = json.get("company_id").toString()
+                    Templateid=json.get("img").toString().toInt()
+                    MyCard1.setImageResource(ImgArray[Templateid-1])
+                    company_id = json.get("company_id").toString().toInt()
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
                 }
             }
         }
+    }
+    fun getCompany(){
         val URL2:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/getData"
 
-        URL2.httpGet(listOf("company_id" to company_id)).responseJson() { request, response, result ->
+        URL2.httpGet(listOf("company_id" to 3)).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     val json = result.value.obj()
-                    val result = json.get("result")
-                    if(result == 1){
+                    val results = json.get("result")
+                    if (results == 1) {
                         Company.text = json.get("company_name").toString()
                     }
                 }

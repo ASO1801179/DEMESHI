@@ -16,7 +16,7 @@ import org.json.JSONObject
 class ShowIndividual : AppCompatActivity() {
     var user_id = 0
     var card_id = 0
-    val ImgArray = arrayOf(green, f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+    val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user_id = intent.getIntExtra("UserId", 0)
@@ -63,6 +63,7 @@ class ShowIndividual : AppCompatActivity() {
                     MyCard1.setImageResource(ImgArray[Templateid-1])
                     SNS.text=(json.get("sns").toString())
                     CardId.setText(card_id.toString())
+                    println(ImgArray[Templateid-1])
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

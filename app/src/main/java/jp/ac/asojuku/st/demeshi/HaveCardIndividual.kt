@@ -45,6 +45,7 @@ class HaveCardIndividual : AppCompatActivity() {
                 show()
             }
         }
+        getDetail()
     }
     fun Delete():Boolean{
         var bool = true
