@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AlertDialog
 import android.widget.Toast
 import com.github.kittinunf.fuel.android.extension.responseJson
@@ -32,7 +33,9 @@ class ShowMyCard : AppCompatActivity() {
         }
         Delete.setOnClickListener{Delete()}
         getDetail()
-        getCompany()
+        Handler().postDelayed(Runnable{
+            getCompany()
+        },500)
     }
     fun Delete(){
         AlertDialog.Builder(this).apply {
@@ -76,7 +79,7 @@ class ShowMyCard : AppCompatActivity() {
     fun getCompany(){
         val URL2:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/getData"
 
-        URL2.httpGet(listOf("company_id" to 3)).responseJson() { request, response, result ->
+        URL2.httpGet(listOf("company_id" to company_id)).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示

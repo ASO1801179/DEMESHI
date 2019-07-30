@@ -10,13 +10,12 @@
     <ImageView
         android:id="@+id/BackDesign"
         android:layout_width="@dimen/MyCardWidth"
-        android:layout_height="@dimen/MyCardHeight"
+        android:layout_height="381dp"
         android:layout_marginTop="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/simple_frame" />
-
     <Button
         android:id="@+id/Back"
         android:layout_width="@dimen/BackBtnWidth"
@@ -27,7 +26,6 @@
         android:text="@string/BackHint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/Delete"
         android:layout_width="@dimen/DeleteBtnWidth"
@@ -38,7 +36,6 @@
         android:text="@string/DeleteHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/Name1"
         android:layout_width="@dimen/CreateTextWidth"
@@ -50,7 +47,6 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toTopOf="@+id/BackDesign" />
-
     <TextView
         android:id="@+id/Phone"
         android:layout_width="@dimen/CreateTextWidth"
@@ -62,29 +58,55 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Name1" />
-
     <TextView
         android:id="@+id/Company"
-        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_width="403dp"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="企業"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Mail" />
-
+    <TextView
+        android:id="@+id/meisi_id"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="名刺ID"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/BackDesign"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toBottomOf="@+id/Company" />
     <TextView
         android:id="@+id/Mail"
         android:layout_width="@dimen/CreateTextWidth"
-        android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
+        android:layout_height="43dp"
         android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="メールアドレス"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Phone" />
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="詳細"
+        app:layout_constraintBottom_toBottomOf="@+id/BackDesign"
+        app:layout_constraintEnd_toEndOf="@+id/BackDesign"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/Company"
+        app:layout_constraintTop_toTopOf="@+id/BackDesign"
+        app:layout_constraintVertical_bias="0.675" />
 
 </android.support.constraint.ConstraintLayout>
