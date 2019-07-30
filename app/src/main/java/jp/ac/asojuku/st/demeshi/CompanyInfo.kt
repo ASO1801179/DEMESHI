@@ -14,8 +14,10 @@ class CompanyInfo : AppCompatActivity() {
 
     var user_id = 0
     var img = 0
-    var login = true
-    var check = true
+    var login = false
+    var check1 = false
+    var check2 = false
+    val regex = Regex("""[a-zA-Z0-9]{9,}""")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +37,10 @@ class CompanyInfo : AppCompatActivity() {
                 Login()
                 Handler().postDelayed(Runnable{
                     if(login) {
-                        val intent = Intent(this, CreateIndividual::class.java)
+                        val intent = Intent(this, CreateCard::class.java)
                         intent.putExtra("UserId", user_id)
                         intent.putExtra("Image", img)
-                        intent.putExtra("CompanyID",CompanyID.toString())
+                        intent.putExtra("CompanyID",CompanyID.text.toString())
                         //intent.putExtra("CompanyName",)
                         startActivity(intent)
                     }
@@ -46,21 +48,24 @@ class CompanyInfo : AppCompatActivity() {
             }else{
                 check()
                 Handler().postDelayed(Runnable{
-                    if(check) {
+                    if(check1 and check2) {
                         val intent = Intent(this, CreateCompany::class.java)
                         intent.putExtra("UserId", user_id)
                         intent.putExtra("Image", img)
-                        intent.putExtra("CompanyID",CompanyID.toString())
-                        intent.putExtra("CompanyPass",CompanyPass.toString())
+                        intent.putExtra("CompanyID",CompanyID.text.toString())
+                        intent.putExtra("CompanyPass",CompanyPass.text.toString())
                         startActivity(intent)
+                    }else{
+                        check1 = false
+                        check2 = false
                     }
                 },1000)
             }
         }
     }
     fun Login(){
-        val company_id = Pair("company_id", CompanyID.toString())
-        val company_password = Pair("company_password", CompanyPass.toString())
+        val company_id = Pair("company_id", CompanyID.text.toString())
+        val company_password = Pair("company_password", CompanyPass.text.toString())
         val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/login"
         val pair = listOf<Pair<String,String>>(company_id,company_password)
         URL.httpGet(pair).responseJson() { request, response, result ->
@@ -69,11 +74,11 @@ class CompanyInfo : AppCompatActivity() {
                     // レスポンスボディを表示
                     val json = result.value.obj()
                     val results = json.get("result")// as JSONArray
-                    if(results == 0){
-                        login = false
+                    if(results == 0) {
                         Toast.makeText(this, "企業IDとパスワードが一致しません", Toast.LENGTH_LONG).show()
                     }else{
                         Toast.makeText(this, "紐づけました", Toast.LENGTH_LONG).show()
+                        login = true
                     }
                 }
                 is Result.Failure -> {
@@ -84,21 +89,27 @@ class CompanyInfo : AppCompatActivity() {
     }
     fun check(){
         val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/id_check"
-        URL.httpGet(listOf("company_id" to CompanyID.toString())).responseJson() { request, response, result ->
+        URL.httpGet(listOf("company_id" to CompanyID.text.toString())).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     val json = result.value.obj()
                     val results = json.get("result")// as JSONArray
                     if(results == 1){
-                        check = false
                         Toast.makeText(this, "このIDは使用されています", Toast.LENGTH_LONG).show()
+                    }else{
+                        check1 = true
                     }
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
                 }
             }
+        }
+        if(!regex.matches(CompanyPass.text.toString())){
+            Toast.makeText(this, "9文字以下です", Toast.LENGTH_LONG).show()
+        }else{
+            check2 = true
         }
     }
 }

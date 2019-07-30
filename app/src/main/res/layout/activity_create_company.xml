@@ -10,77 +10,62 @@
         android:id="@+id/BackDesign"
         android:layout_width="@dimen/MyCardWidth"
         android:layout_height="@dimen/MyCardHeight"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/simple_frame" />
-
+        app:srcCompat="@drawable/simple_frame"
+        android:contentDescription="TODO" />
+    ​
     <EditText
         android:id="@+id/EditMail"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/MailHint"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EditPhone"
         app:layout_constraintTop_toBottomOf="@+id/EditPhone" />
-
+    ​
     <EditText
-        android:id="@+id/EditPhone"
+        android:id="@+id/place"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/PhoneHint"
-        android:inputType="phone"
-        android:textSize="@dimen/CreateTextSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditCompanyName" />
-
-    <EditText
-        android:id="@+id/EditAddress"
-        android:layout_width="@dimen/CreateTextWidth"
-        android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/AddressHint"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EditMail"
         app:layout_constraintTop_toBottomOf="@+id/EditMail" />
-
+    ​
     <EditText
-        android:id="@+id/EditCompanyName"
+        android:id="@+id/EditCompanyName1"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/CompanyNameHint"
         android:inputType="textPersonName"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BackDesign" />
-
+    ​
     <Button
         android:id="@+id/CreateBtn"
-        android:layout_width="@dimen/CreateBtnWidth"
-        android:layout_height="@dimen/CreateBtnHeight"
-        android:layout_marginBottom="16dp"
+        android:layout_width="110dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/CreateBtnHint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
+    ​
     <Button
         android:id="@+id/Back"
         android:layout_width="@dimen/BackBtnWidth"
@@ -91,7 +76,7 @@
         android:text="@string/BackHint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    ​
     <TextView
         android:id="@+id/CompanyName"
         android:layout_width="@dimen/CreateTextWidth"
@@ -103,7 +88,7 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toTopOf="@+id/BackDesign" />
-
+    ​
     <TextView
         android:id="@+id/Phone"
         android:layout_width="@dimen/CreateTextWidth"
@@ -115,19 +100,7 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/CompanyName" />
-
-    <TextView
-        android:id="@+id/Address"
-        android:layout_width="@dimen/CreateTextWidth"
-        android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="住所"
-        android:textSize="@dimen/CreateTextSize"
-        app:layout_constraintStart_toStartOf="@+id/BackDesign"
-        app:layout_constraintTop_toBottomOf="@+id/Mail" />
-
+    ​
     <TextView
         android:id="@+id/Mail"
         android:layout_width="@dimen/CreateTextWidth"
@@ -139,5 +112,43 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Phone" />
+    ​
+    <EditText
+        android:id="@+id/EditUrl"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/place"
+        app:layout_constraintTop_toBottomOf="@+id/place" />
+    ​
+    <TextView
+        android:id="@+id/URL"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="URL"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/BackDesign"
+        app:layout_constraintTop_toBottomOf="@+id/Mail" />
+    ​
+    <EditText
+        android:id="@+id/EditPhone"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="電話番号"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@+id/EditCompanyName1"
+        app:layout_constraintTop_toBottomOf="@+id/EditCompanyName1" />
 
 </android.support.constraint.ConstraintLayout>
