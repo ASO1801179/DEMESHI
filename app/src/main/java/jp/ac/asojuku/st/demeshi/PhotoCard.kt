@@ -14,12 +14,10 @@ import kotlinx.android.synthetic.main.activity_photo_card.*
 class PhotoCard : AppCompatActivity() {
 
     var user_id = 0
-    var card_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         user_id = intent.getIntExtra("UserId",0)
-        card_id = intent.getIntExtra("CardId",0)
         setContentView(R.layout.activity_photo_card)
         MyCardBtn.setOnClickListener{
             val intent = Intent(this,MyCardList::class.java)
@@ -39,8 +37,12 @@ class PhotoCard : AppCompatActivity() {
         AddBtn.setOnClickListener{add()}
     }
     fun add(){
-        val URL:String = "http://18001187.pupu.jp/untitled/public/user/card/insert/"+user_id.toString() + "/" + card_id.toString()
-        URL.httpGet().responseJson() { request, response, result ->
+        val card_id = AddBtn.text.toString()
+        val UserId = Pair("user_id", user_id.toString())
+        val CardId = Pair("meisi_id", card_id)
+        val pair = listOf<Pair<String,String>>(UserId,CardId)
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/card/collection"
+        URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success->{
                     // レスポンスボディを表示
@@ -48,11 +50,10 @@ class PhotoCard : AppCompatActivity() {
                     val results = json.get("result")// as JSONArray
                     if(results == 1){
                         Toast.makeText(this,"追加しました。", Toast.LENGTH_LONG).show()
-                    }else{
-                        Toast.makeText(this, "該当するIDは見つかりませんでした。", Toast.LENGTH_LONG).show()
                     }
                 }
                 is Result.Failure -> {
+                    Toast.makeText(this, "該当するIDは見つかりませんでした。", Toast.LENGTH_LONG).show()
                     println("通信に失敗しました。")
                 }
             }

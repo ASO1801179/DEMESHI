@@ -36,7 +36,8 @@
         <activity android:name=".CreateIndividual" />
         <activity android:name=".CompanyInfo" />
         <activity android:name=".ShowIndividual" />
-        <activity android:name=".ShowIndCompany"></activity>
+        <activity android:name=".ShowIndCompany" />
+        <activity android:name=".HaveCardIndividual"></activity>
     </application>
 
 </manifest>

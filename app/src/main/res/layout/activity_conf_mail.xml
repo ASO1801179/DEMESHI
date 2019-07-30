@@ -10,7 +10,7 @@
         android:id="@+id/ConfText"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/ConfTextHeight"
-        android:layout_marginTop="412dp"
+        android:layout_marginTop="330dp"
         android:gravity="center"
         android:text="@string/ConfForgotText"
         android:textSize="@dimen/TextSize"

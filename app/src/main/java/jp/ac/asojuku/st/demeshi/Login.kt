@@ -19,7 +19,6 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         LoginBtn.setOnClickListener{Login()}
-        //LoginBtn.setOnClickListener{startActivity(Intent(it.context,HaveCardList::class.java))}
         RegisterBtn.setOnClickListener{startActivity(Intent(it.context,Register::class.java))}
         ForgotBtn.setOnClickListener{
             Toast.makeText(this, "DEMESHIの次回作にご期待ください", Toast.LENGTH_LONG).show()
@@ -34,17 +33,12 @@ class Login : AppCompatActivity() {
             Handler().postDelayed(Runnable{
                 if(user_id != 0){
                     intent.putExtra("UserId", user_id)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
                 }
             },1000)
-//            if(Validate(phone,mail,pass,confpass)){
-//                Signal(name,phone,mail,pass)
-//                startActivity(intent)
-//            }else{
-//                Toast.makeText(this, "入力項目が間違っています", Toast.LENGTH_LONG).show()
-//            }
         }else{
-            Toast.makeText(this, "全ての項目を入力してください", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "ログイン情報を入力してください", Toast.LENGTH_LONG).show()
         }
     }
     fun Signal(User_Name:String,User_Password:String){
@@ -52,6 +46,7 @@ class Login : AppCompatActivity() {
         val user_name = Pair("user_name", User_Name)
         val user_password = Pair("user_password", User_Password)
         val pair = listOf<Pair<String,String>>(user_name,user_password)
+        //val URL:String = "http://18001187.pupu.jp/untitled/public/user/login"
         val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/user/login"
         URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
@@ -68,6 +63,7 @@ class Login : AppCompatActivity() {
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
+                    println(result)
                 }
             }
         }

@@ -26,49 +26,32 @@
         android:id="@+id/EditMail"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/MailHint"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditPhone" />
+        app:layout_constraintStart_toStartOf="@+id/EditSns"
+        app:layout_constraintTop_toBottomOf="@+id/EditSns" />
 
     <EditText
         android:id="@+id/EditPhone"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/PhoneHint"
         android:inputType="phone"
         android:textSize="@dimen/CreateTextSize"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EditName"
         app:layout_constraintTop_toBottomOf="@+id/EditName" />
-
-    <EditText
-        android:id="@+id/EditAddress"
-        android:layout_width="@dimen/CreateTextWidth"
-        android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/sns"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditMail" />
 
     <EditText
         android:id="@+id/EditName"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/NameHint"
         android:inputType="textPersonName"
@@ -113,20 +96,11 @@
     <TextView
         android:id="@+id/Phone"
         android:layout_width="200dp"
-        android:layout_height="34dp "
+        android:layout_height="34dp"
         android:text="電話番号"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/Name1"
         app:layout_constraintTop_toBottomOf="@+id/Name1" />
-
-    <TextView
-        android:id="@+id/Address"
-        android:layout_width="200dp"
-        android:layout_height="34dp"
-        android:text="SNS"
-        android:textSize="@dimen/CreateTextSize"
-        app:layout_constraintStart_toStartOf="@+id/Mail"
-        app:layout_constraintTop_toBottomOf="@+id/Mail" />
 
     <TextView
         android:id="@+id/Mail"
@@ -139,5 +113,26 @@
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
         app:layout_constraintTop_toTopOf="@+id/BackDesign" />
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:text="TextView"
+        android:textSize="@dimen/CreateTextSize"
+        app:layout_constraintStart_toStartOf="@+id/Mail"
+        app:layout_constraintTop_toBottomOf="@+id/Mail"
+        tools:text="@string/sns" />
+
+    <EditText
+        android:id="@+id/EditSns"
+        android:layout_width="@dimen/CreateTextWidth"
+        android:layout_height="@dimen/CreateTextHeight"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/sns"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/EditPhone"
+        app:layout_constraintTop_toBottomOf="@+id/EditPhone" />
 
 </android.support.constraint.ConstraintLayout>

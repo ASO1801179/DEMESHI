@@ -12,11 +12,6 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class Register : AppCompatActivity() {
 
-//    var name = ""
-//    var phone = ""
-//    var mail = ""
-//    var pass = ""
-//    var confpass = ""
     var bool = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,12 +36,6 @@ class Register : AppCompatActivity() {
                     startActivity(intent)
                 }
             },1000)
-//            if(Validate(phone,mail,pass,confpass)){
-//                Signal(name,phone,mail,pass)
-//                startActivity(intent)
-//            }else{
-//                Toast.makeText(this, "入力項目が間違っています", Toast.LENGTH_LONG).show()
-//            }
         }else{
             Toast.makeText(this, "全ての項目を入力してください", Toast.LENGTH_LONG).show()
         }
@@ -60,7 +49,7 @@ class Register : AppCompatActivity() {
         val mailaddress = Pair("mailaddress",mail)
         val number = Pair("phone_number",phone)
         val pair = listOf<Pair<String,String>>(username,password,mailaddress,number)
-        val URL:String = "http://18001187.pupu.jp/untitled/public/user/insert"
+        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/user/insert"
         URL.httpGet(pair).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
@@ -99,21 +88,4 @@ class Register : AppCompatActivity() {
             }
         }
     }
-    //検証
-//    fun Validate(phone:String,mail:String,password:String,confpass:String):Boolean{
-//        var result = true
-//        if(!phone.matches("""^(070|080|090)-\d{4}-\d{4}$""".toRegex())){
-//            result = false
-//        }
-//        if(!mail.matches("""/^[a-zA-Z0-9.!#${'$'}%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*${'$'}/""".toRegex())){
-//            result = false
-//        }
-//        if(!password.equals(confpass)){
-//            result = false
-//        }
-//        if(!password.matches("""^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!-/:-@[-`{-~])[!-~]{8,48}${'$'}""".toRegex())){
-//            result = false
-//        }
-//        return result
-//    }
 }

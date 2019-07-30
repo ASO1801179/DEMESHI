@@ -9,17 +9,10 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import jp.ac.asojuku.st.demeshi.R.drawable.*
-import kotlinx.android.synthetic.main.activity_create_card.*
 import kotlinx.android.synthetic.main.activity_create_company.*
-import kotlinx.android.synthetic.main.activity_create_company.Address
 import kotlinx.android.synthetic.main.activity_create_company.Back
 import kotlinx.android.synthetic.main.activity_create_company.BackDesign
 import kotlinx.android.synthetic.main.activity_create_company.CreateBtn
-import kotlinx.android.synthetic.main.activity_create_company.EditAddress
-import kotlinx.android.synthetic.main.activity_create_company.EditMail
-import kotlinx.android.synthetic.main.activity_create_company.EditPhone
-import kotlinx.android.synthetic.main.activity_create_company.Mail
-import kotlinx.android.synthetic.main.activity_create_company.Phone
 
 class CreateCompany : AppCompatActivity() {
 
@@ -29,13 +22,13 @@ class CreateCompany : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_card)
+        setContentView(R.layout.activity_create_company)
         Back.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
         CreateBtn.setOnClickListener{Create()}
 
         user_id = intent.getIntExtra("UserId",0)
-        company_id = intent.getStringExtra("company_id")
-        company_password = intent.getStringExtra("company_password")
+        company_id = intent.getStringExtra("CompanyID")
+        company_password = intent.getStringExtra("CompanyPass")
 
         when(intent.getIntExtra("Image",0)){
             7->{
@@ -51,54 +44,63 @@ class CreateCompany : AppCompatActivity() {
         CompanyName.bringToFront()
         Phone.bringToFront()
         Mail.bringToFront()
-        Address.bringToFront()
+        URL.bringToFront()
+}
+
+    override fun onResume() {
+        super.onResume()
+        CompanyName.text = "〇〇株式会社"
+        Phone.text = "xxx-xxx-xxxx"
+        Mail.text = "xxxx@gmial.com"
+        URL.text = "会社追加"
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        CompanyName.text = "〇〇株式会社"
-//        Phone.text = "xxx-xxx-xxxx"
-//        Mail.text = "xxxx@gmial.com"
-//        Address.text = "xxxxxx.co.jp"
-//    }
+    fun Create() {
+        if (!EditCompanyName1.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty() and !EditUrl.text.toString().isEmpty() and !place.text.toString().isEmpty()) {
+            val URL: String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/insert"
+            //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
+            val company_id = Pair("company_id", company_id)
+            val company_password = Pair("company_password", company_password)
+            val name = Pair("company_name", EditCompanyName1.text.toString())
+            val number = Pair("company_phone", EditPhone.text.toString())
+            val address = Pair("company_mail", EditMail.text.toString())
+            val url = Pair("company_url", EditUrl.text.toString())
+            val company_place = Pair("company_place", place.text.toString())
+            val img = Pair("img", Integer.toString(intent.getIntExtra("Image", 0)))
 
-    fun Create(){
-        val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/add"
-        //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
-        val user_id = Pair("user_id",Integer.toString(user_id))
-        val name = Pair("company_name",Name1.text.toString())
-        val number = Pair("company_phone",Phone.text.toString())
-        val address = Pair("company_mail",Mail.text.toString())
-        val place = Pair("company_place",Address.text.toString())
-        val url = Pair("company_url",url.text.toString())
-        val img =Pair("img",Integer.toString(intent.getIntExtra("Image",0)))
+            val pair = listOf<Pair<String, String>>(company_id, company_password, name, company_place, number, address, url)
+            println(pair)
+            Handler().postDelayed(Runnable {
 
-        val pair = listOf<Pair<String,String>>(user_id,name,number,address,place,img,url)
-        println(pair)
-        Handler().postDelayed(Runnable {
+                URL.httpGet(pair).responseJson() { request, response, result ->
 
-            URL.httpGet(pair).responseJson() { request, response, result ->
-                when (result) {
-                    is Result.Success -> {
-                        // レスポンスボディを表示
-                        val json = result.value.obj()
-                        val results = json.get("result")// as JSONArray
+                    when (result) {
 
-                        //作成成功時それ以外は失敗
-                        if (results == 1) {
-                            val intent = Intent(this, MyCardList::class.java)
-                            intent.putExtra("UserId", user_id)
-                            Toast.makeText(this, "名刺作成!!", Toast.LENGTH_LONG).show()
-                            startActivity(intent)
-                        } else {
 
+                        is Result.Success -> {
+                            // レスポンスボディを表示
+                            val json = result.value.obj()
+                            val results = json.get("result")// as JSONArray
+
+                            //作成成功時それ以外は失敗
+                            if (results == 1) {
+                                val intent = Intent(this, MyCardList::class.java)
+                                intent.putExtra("UserId", user_id)
+                                Toast.makeText(this, "名刺作成!!", Toast.LENGTH_LONG).show()
+                                startActivity(intent)
+                            } else {
+                                println("失敗しました")
+                            }
+                        }
+                        is Result.Failure -> {
+                            println(response)
+                            println("通信に失敗しました。")
                         }
                     }
-                    is Result.Failure -> {
-                        println("通信に失敗しました。")
-                    }
                 }
-            }
-        },1000)
+            }, 1000)
+        }else{
+            Toast.makeText(this, "未入力の項目があります", Toast.LENGTH_LONG).show()
+        }
     }
 }

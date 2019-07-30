@@ -65,7 +65,7 @@
         tools:text="@string/MailHint" />
 
     <TextView
-        android:id="@+id/Address"
+        android:id="@+id/place"
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginTop="40dp"
@@ -131,6 +131,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address" />
+        app:layout_constraintTop_toBottomOf="@+id/place" />
 
 </android.support.constraint.ConstraintLayout>
