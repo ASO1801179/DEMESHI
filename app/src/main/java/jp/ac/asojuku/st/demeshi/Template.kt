@@ -33,7 +33,7 @@ class Template : AppCompatActivity() {
         when((num-1)/3){
             0->{
                 //CreateCard
-                val intent = Intent(this,CreateCard::class.java)
+                val intent = Intent(this,CreateIndividual::class.java)
                 intent.putExtra("Image",num)
                 intent.putExtra("UserId",user_id)
                 startActivity(intent)
@@ -44,6 +44,7 @@ class Template : AppCompatActivity() {
                 intent.putExtra("Image",num)
                 intent.putExtra("Confirm","Individual")
                 intent.putExtra("UserId",user_id)
+                startActivity(intent)
             }
             2->{
                 //CreateCompany
@@ -51,6 +52,7 @@ class Template : AppCompatActivity() {
                 intent.putExtra("Image",num)
                 intent.putExtra("Confirm","Company")
                 intent.putExtra("UserId",user_id)
+                startActivity(intent)
             }
         }
     }

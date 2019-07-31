@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/EditName" />
     ​
 
     <EditText
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditName" />
+        app:layout_constraintTop_toBottomOf="@+id/EditMail" />
     ​
 
     <EditText
@@ -112,7 +112,7 @@
         android:layout_marginStart="74dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="藤家　竜"
+        android:text="名前"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintBottom_toBottomOf="@+id/BackDesign"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,7 +142,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="株式会社松尾"
+        android:text="企業名"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Name1" />

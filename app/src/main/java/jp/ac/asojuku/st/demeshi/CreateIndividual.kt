@@ -37,13 +37,6 @@ class CreateIndividual : AppCompatActivity() {
         SNS.bringToFront()
         CreateBtn.setOnClickListener { CardCreate() }
     }
-    override fun onResume() {
-        super.onResume()
-        Name1.text = "情報太郎"
-        Phone.text = "0120-00-2229"
-        Mail.text = "zyouhou@gmial.com"
-        SNS.text = "@完全個人"
-    }
     fun CardCreate() {
         if (!EditName.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty()) {
             val URL: String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/card/normal_add"
@@ -68,11 +61,10 @@ class CreateIndividual : AppCompatActivity() {
                             Toast.makeText(this, "名刺作成!!", Toast.LENGTH_LONG).show()
                             startActivity(intent)
                         } else {
-
+                            println(request)
                         }
                     }
                     is Result.Failure -> {
-                        println(request)
                         println("通信に失敗しました。")
                     }
                 }

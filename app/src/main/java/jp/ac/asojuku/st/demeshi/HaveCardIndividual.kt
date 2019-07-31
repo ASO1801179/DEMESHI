@@ -57,13 +57,17 @@ class HaveCardIndividual : AppCompatActivity() {
                     // レスポンスボディを表示
                     val jsons = result.value.array()
                     val json = jsons[0] as JSONObject
-                    var Templateid = 0
-                    Name1.text = json.get("name").toString()
+                    Name1.text = "名前：" + json.get("name").toString()
+                    name1.text = json.get("name").toString()
+                    PhoneNumber.text = "電話番号：" + json.get("number").toString()
                     Phone.text = json.get("number").toString()
+                    MailAddress.text = "メールアドレス：" + json.get("address").toString()
                     Mail.text = json.get("address").toString()
-                    Templateid = json.get("img").toString().toInt()
+                    val Templateid = json.get("img").toString().toInt()
                     BackDesign.setImageResource(ImgArray[Templateid-1])
-                    SNS.text = (json.get("sns").toString())
+                    SNS.text = "SNS：" + (json.get("sns").toString())
+                    sns.text = (json.get("sns").toString())
+                    CardId.text = "名刺ID：" + json.get("meisi_id").toString()
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

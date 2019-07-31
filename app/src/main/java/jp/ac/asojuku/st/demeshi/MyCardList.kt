@@ -24,6 +24,7 @@ class MyCardList : AppCompatActivity() {
     var CardId = arrayOf(0,0,0,0)
     //完全個人0
     var CompanyFlag = arrayOf(0,0,0,0)
+    var Flag = arrayOf(false,false,false,false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,107 +54,123 @@ class MyCardList : AppCompatActivity() {
             startActivity(intent)
         }
         MyCard1.setOnClickListener{
-            if(CompanyFlag[0] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[0])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[0])
-                startActivity(intent)
+            if(Flag[0]){
+                if(CompanyFlag[0] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[0])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[0])
+                    startActivity(intent)
+                }
             }
         }
         Name1.setOnClickListener{
-            if(CompanyFlag[0] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[0])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[0])
-                startActivity(intent)
+            if(Flag[0]){
+                if(CompanyFlag[0] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[0])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[0])
+                    startActivity(intent)
+                }
             }
         }
         MyCard2.setOnClickListener{
-            if(CompanyFlag[1] == 0) {
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[1])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[1])
-                startActivity(intent)
+            if(Flag[1]){
+                if(CompanyFlag[1] == 0) {
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[1])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[1])
+                    startActivity(intent)
+                }
             }
         }
         Name2.setOnClickListener{
-            if(CompanyFlag[1] == 0) {
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[1])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[1])
-                startActivity(intent)
+            if(Flag[1]){
+                if(CompanyFlag[1] == 0) {
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[1])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[1])
+                    startActivity(intent)
+                }
             }
         }
         MyCard3.setOnClickListener{
-            if(CompanyFlag[2] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[2])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[2])
-                startActivity(intent)
+            if(Flag[2]){
+                if(CompanyFlag[2] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[2])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[2])
+                    startActivity(intent)
+                }
             }
         }
         Name3.setOnClickListener{
-            if(CompanyFlag[2] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[2])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[2])
-                startActivity(intent)
+            if(Flag[2]){
+                if(CompanyFlag[2] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[2])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[2])
+                    startActivity(intent)
+                }
             }
         }
         MyCard4.setOnClickListener{
-            if(CompanyFlag[3] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[3])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[3])
-                startActivity(intent)
+            if(Flag[3]){
+                if(CompanyFlag[3] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[3])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[3])
+                    startActivity(intent)
+                }
             }
         }
         Name4.setOnClickListener{
-            if(CompanyFlag[3] == 0){
-                val intent = Intent(this,ShowIndividual::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[3])
-                startActivity(intent)
-            }else{
-                val intent = Intent(this,ShowMyCard::class.java)
-                intent.putExtra("UserId",user_id)
-                intent.putExtra("CardId",CardId[3])
-                startActivity(intent)
+            if(Flag[3]){
+                if(CompanyFlag[3] == 0){
+                    val intent = Intent(this,ShowIndividual::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[3])
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this,ShowMyCard::class.java)
+                    intent.putExtra("UserId",user_id)
+                    intent.putExtra("CardId",CardId[3])
+                    startActivity(intent)
+                }
             }
         }
         //CompanyName.setOnClickListener{startActivity(Intent(it.context,ShowMyCard::class.java))}
@@ -235,6 +252,7 @@ class MyCardList : AppCompatActivity() {
                         CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
                         //企業個人が1,完全個人0
                         CompanyFlag[i] = (json[i] as JSONObject).get("flag").toString().toInt()
+                        Flag[i] = true
                         if(i==3){
                             break
                         }

@@ -45,4 +45,5 @@
     <dimen name="Create_Height">40dp</dimen>
     <dimen name="DetailBtnHeight">50dp</dimen>
     <dimen name="DetailBtnWidth">100dp</dimen>
+    <dimen name="CompanyInfoText">20sp</dimen>
 </resources>

@@ -35,13 +35,16 @@ class ShowMyCard : AppCompatActivity() {
         getDetail()
         Handler().postDelayed(Runnable{
             getCompany()
-        },1000)
+        },1500)
+
+        check.setOnClickListener {
+            val intent = Intent(this, ShowCompany::class.java)
+            intent.putExtra("Flag","My")
+            intent.putExtra("company_id", company_id.toString())
+            startActivity(intent)
+        }
     }
 
-    override fun onResume() {
-        super.onResume()
-        name1.text = Name1.text
-    }
     fun Delete(){
         AlertDialog.Builder(this).apply {
             setTitle("名刺削除")
@@ -67,10 +70,13 @@ class ShowMyCard : AppCompatActivity() {
                     val jsons = result.value.array()
                     val json = jsons[0] as JSONObject
                     var Templateid = 0
-                    Name1.text = json.get("name").toString()
-                    Mail.text = json.get("address").toString()
-                    Phone.text = json.get("number").toString()
-                    CardId.text = card_id.toString()
+                    Name1.text = "名前：" + json.get("name").toString()
+                    name1.text = json.get("name").toString()
+                    Mail.text = "メールアドレス：" + json.get("address").toString()
+                    mail.text = json.get("address").toString()
+                    Phone.text = "電話番号：" + json.get("number").toString()
+                    phone.text = json.get("number").toString()
+                    CardId.text = "名刺ID：" + card_id.toString()
                     Templateid=json.get("img").toString().toInt()
                     MyCard1.setImageResource(ImgArray[Templateid-1])
                     company_id = json.get("company_id").toString()
@@ -83,7 +89,6 @@ class ShowMyCard : AppCompatActivity() {
     }
     fun getCompany(){
         val URL2:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/getData"
-
         URL2.httpGet(listOf("company_id" to company_id)).responseJson() { request, response, result ->
             when (result) {
                 is Result.Success -> {
@@ -91,7 +96,10 @@ class ShowMyCard : AppCompatActivity() {
                     val json = result.value.obj()
                     val results = json.get("result")
                     if (results == 1) {
-                        Company.text = json.get("company_name").toString()
+                        Company.text = "企業：" + json.get("company_name").toString()
+                        place.text = json.get("company_name").toString()
+                    }else{
+                        println("失敗")
                     }
                 }
                 is Result.Failure -> {

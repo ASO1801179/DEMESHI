@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name1"
+        app:layout_constraintTop_toBottomOf="@+id/MailAddress"
         tools:text="@string/PhoneHint" />
 
     <TextView
@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/Name1"
         tools:text="@string/MailHint" />
 
     <TextView
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
         tools:text="@string/SNSHint" />
 
     <Button

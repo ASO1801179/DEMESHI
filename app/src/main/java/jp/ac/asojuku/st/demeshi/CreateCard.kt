@@ -44,10 +44,6 @@ class CreateCard : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Name1.text = "情報太郎"
-        Phone.text = "xxx-xxx-xxxx"
-        Mail.text = "xxxx@gmail.co,"
-        place.text = "〇〇商事"
     }
 
     fun Create(){
