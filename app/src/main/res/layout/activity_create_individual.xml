@@ -124,13 +124,14 @@
         app:layout_constraintTop_toBottomOf="@+id/Mail"
         tools:text="@string/sns" />
     ​
+
     <EditText
         android:id="@+id/EditSns"
         android:layout_width="@dimen/CreateTextWidth"
         android:layout_height="@dimen/CreateTextHeight"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/sns"
+        android:hint="@string/SNSHint"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/EditPhone"
         app:layout_constraintTop_toBottomOf="@+id/EditPhone" />

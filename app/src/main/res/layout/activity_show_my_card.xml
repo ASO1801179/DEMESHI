@@ -71,7 +71,7 @@
         android:layout_width="@dimen/TextWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginTop="40dp"
-        android:text="TextView"
+        android:text="企業"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.293"

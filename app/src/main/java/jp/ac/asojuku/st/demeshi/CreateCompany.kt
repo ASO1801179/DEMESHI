@@ -55,7 +55,7 @@ class CreateCompany : AppCompatActivity() {
     }
 
     fun Create() {
-        if (!EditCompanyName1.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty() and !EditUrl.text.toString().isEmpty() and !place.text.toString().isEmpty()) {
+        if (!EditCompanyName1.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty() and !EditUrl.text.toString().isEmpty() and !place.text.toString().isEmpty() ) {
             val URL: String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/company/insert"
             //val URL:String = "http://18001187.pupu.jp/untitled/public/card/insert/" + user_id
             val company_id = Pair("company_id", company_id)
@@ -65,9 +65,9 @@ class CreateCompany : AppCompatActivity() {
             val address = Pair("company_mail", EditMail.text.toString())
             val url = Pair("company_url", EditUrl.text.toString())
             val company_place = Pair("company_place", place.text.toString())
-            val img = Pair("img", Integer.toString(intent.getIntExtra("Image", 0)))
+            val img = Pair("image", Integer.toString(intent.getIntExtra("Image", 0)))
 
-            val pair = listOf<Pair<String, String>>(company_id, company_password, name, company_place, number, address, url)
+            val pair = listOf<Pair<String, String>>(company_id, company_password, name, company_place, number, address, url,img)
             Handler().postDelayed(Runnable {
                 URL.httpGet(pair).responseJson() { request, response, result ->
                     when (result) {

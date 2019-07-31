@@ -18,7 +18,7 @@ class ShowMyCard : AppCompatActivity() {
 
     var user_id = 0
     var card_id = 0
-    var company_id = 0
+    var company_id = ""
     val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,7 +68,7 @@ class ShowMyCard : AppCompatActivity() {
                     CardId.text = card_id.toString()
                     Templateid=json.get("img").toString().toInt()
                     MyCard1.setImageResource(ImgArray[Templateid-1])
-                    company_id = json.get("company_id").toString().toInt()
+                    company_id = json.get("company_id").toString()
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")
