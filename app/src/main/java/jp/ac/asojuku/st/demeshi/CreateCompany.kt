@@ -32,13 +32,13 @@ class CreateCompany : AppCompatActivity() {
 
         when (intent.getIntExtra("Image", 0)) {
             7 -> {
-                BackDesign.setImageResource(space)
+                BackDesign.setImageResource(new7)
             }
             8 -> {
-                BackDesign.setImageResource(f4782)
+                BackDesign.setImageResource(new8)
             }
             9 -> {
-                BackDesign.setImageResource(f4792)
+                BackDesign.setImageResource(new9)
             }
         }
         CompanyName.bringToFront()
@@ -91,7 +91,7 @@ class CreateCompany : AppCompatActivity() {
                         }
                     }
                 }
-            }, 1000)
+            }, 1500)
         }else{
             Toast.makeText(this, "未入力の項目があります", Toast.LENGTH_LONG).show()
         }

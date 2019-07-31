@@ -23,7 +23,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
-        android:gravity="left"
+        android:gravity="left|center_vertical"
         android:text="@string/Company"
         android:textSize="@dimen/TemplateTextSize"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,15 +32,18 @@
     <TextView
         android:id="@+id/Individual"
         android:layout_width="@dimen/TemplateTextWidth"
-        android:layout_height="57dp"
+        android:layout_height="@dimen/TemplateTextHeight"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:gravity="left"
+        android:layout_marginTop="80dp"
+        android:gravity="left|center_vertical"
         android:text="@string/Individual"
         android:textSize="@dimen/TemplateTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Back" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/mixer"
@@ -49,7 +52,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:gravity="left"
+        android:gravity="left|center_vertical"
         android:text="@string/mixer"
         android:textSize="@dimen/TemplateTextSize"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,117 +62,126 @@
         android:id="@+id/Template1"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/Template2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Individual"
-        app:srcCompat="@drawable/green" />
+        app:srcCompat="@drawable/new1" />
 
     <ImageView
         android:id="@+id/Template7"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
+        android:layout_marginEnd="36dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/Template8"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Address"
-        app:srcCompat="@drawable/space" />
+        app:srcCompat="@drawable/new7" />
+
     <ImageView
         android:id="@+id/Template2"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/Template3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Individual"
-        app:srcCompat="@drawable/f4796" />
+        app:srcCompat="@drawable/new2" />
+
     <ImageView
         android:id="@+id/Template3"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Template2"
         app:layout_constraintTop_toBottomOf="@+id/Individual"
-        app:srcCompat="@drawable/f4788" />
+        app:srcCompat="@drawable/new3" />
 
     <ImageView
         android:id="@+id/Template4"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/Template5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mixer"
-        app:srcCompat="@drawable/f4786" />
+        app:srcCompat="@drawable/new4" />
 
     <ImageView
         android:id="@+id/Template5"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginLeft="36dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toEndOf="@+id/Template4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mixer"
-        app:srcCompat="@drawable/f4790" />
+        app:srcCompat="@drawable/new5" />
 
     <ImageView
         android:id="@+id/Template6"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Template5"
         app:layout_constraintTop_toBottomOf="@+id/mixer"
-        app:srcCompat="@drawable/f4791" />
+        app:srcCompat="@drawable/new6" />
 
     <ImageView
         android:id="@+id/Template8"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toEndOf="@+id/Template7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Address"
-        app:srcCompat="@drawable/f4782" />
+        app:srcCompat="@drawable/new8" />
 
     <ImageView
         android:id="@+id/Template9"
         android:layout_width="@dimen/TemplateImgWidth"
         android:layout_height="@dimen/TemplateImgHeight"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Template8"
         app:layout_constraintTop_toBottomOf="@+id/Address"
-        app:srcCompat="@drawable/f4792" />
+        app:srcCompat="@drawable/new9" />
 </android.support.constraint.ConstraintLayout>

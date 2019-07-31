@@ -37,7 +37,7 @@ class PhotoCard : AppCompatActivity() {
         AddBtn.setOnClickListener{add()}
     }
     fun add(){
-        val card_id = AddBtn.text.toString()
+        val card_id = Card_id.text.toString()
         val UserId = Pair("user_id", user_id.toString())
         val CardId = Pair("meisi_id", card_id)
         val pair = listOf<Pair<String,String>>(UserId,CardId)

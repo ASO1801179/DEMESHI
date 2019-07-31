@@ -44,7 +44,7 @@ class CompanyInfo : AppCompatActivity() {
                         //intent.putExtra("CompanyName",)
                         startActivity(intent)
                     }
-                },1000)
+                },1500)
             }else{
                 check()
                 Handler().postDelayed(Runnable{
@@ -59,7 +59,7 @@ class CompanyInfo : AppCompatActivity() {
                         check1 = false
                         check2 = false
                     }
-                },1000)
+                },1500)
             }
         }
     }

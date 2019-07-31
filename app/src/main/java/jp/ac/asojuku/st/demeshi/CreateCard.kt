@@ -27,13 +27,13 @@ class CreateCard : AppCompatActivity() {
         CreateBtn.setOnClickListener{Create()}
         when(intent.getIntExtra("Image",0)){
             4->{
-                    BackDesign.setImageResource(f4786)
+                    BackDesign.setImageResource(new4)
             }
             5->{
-                BackDesign.setImageResource(f4790)
+                BackDesign.setImageResource(new5)
             }
             6->{
-                BackDesign.setImageResource(f4791)
+                BackDesign.setImageResource(new6)
             }
         }
         Name1.bringToFront()

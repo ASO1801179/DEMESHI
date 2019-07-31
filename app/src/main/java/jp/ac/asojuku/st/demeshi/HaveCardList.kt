@@ -151,7 +151,7 @@ class HaveCardList : AppCompatActivity() {
     fun GetMyCard(){
         val NameArray = arrayOf(R.id.Name1, R.id.Name2,R.id.Name3, R.id.Name4)
         val HaveCardArray = arrayOf(HaveCard1,HaveCard2,HaveCard3,HaveCard4)
-        val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+        val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
         val CallArray = arrayOf(CallBtn1,CallBtn2,CallBtn3,CallBtn4)
         val MailArray = arrayOf(MailBtn1,MailBtn2,MailBtn3,MailBtn4)
 

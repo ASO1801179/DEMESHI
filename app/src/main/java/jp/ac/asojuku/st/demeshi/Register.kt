@@ -35,7 +35,7 @@ class Register : AppCompatActivity() {
                 if(bool){
                     startActivity(intent)
                 }
-            },1000)
+            },1500)
         }else{
             Toast.makeText(this, "全ての項目を入力してください", Toast.LENGTH_LONG).show()
         }

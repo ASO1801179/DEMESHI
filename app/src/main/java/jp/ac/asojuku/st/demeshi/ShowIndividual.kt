@@ -16,7 +16,7 @@ import org.json.JSONObject
 class ShowIndividual : AppCompatActivity() {
     var user_id = 0
     var card_id = 0
-    val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+    val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user_id = intent.getIntExtra("UserId", 0)
@@ -56,14 +56,17 @@ class ShowIndividual : AppCompatActivity() {
                     val jsons = result.value.array()
                     val json = jsons[0] as JSONObject
                     var Templateid = 0
-                    Name1.text = json.get("name").toString()
-                    PhoneNumber.text=json.get("number").toString()
-                    MailAddress.text=json.get("address").toString()
+                    Name1.text = "名前：" + json.get("name").toString()
+                    name1.text = json.get("name").toString()
+                    PhoneNumber.text= "電話番号：" + json.get("number").toString()
+                    Phone.text = json.get("number").toString()
+                    MailAddress.text= "メールアドレス：" + json.get("address").toString()
+                    Mail.text = json.get("address").toString()
                     Templateid=json.get("img").toString().toInt()
                     MyCard1.setImageResource(ImgArray[Templateid-1])
-                    SNS.text=(json.get("sns").toString())
-                    CardId.setText(card_id.toString())
-                    println(ImgArray[Templateid-1])
+                    SNS.text = "SNS：" + (json.get("sns").toString())
+                    sns.text = json.get("sns").toString()
+                    CardId.text = "名刺ID：" + card_id.toString()
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

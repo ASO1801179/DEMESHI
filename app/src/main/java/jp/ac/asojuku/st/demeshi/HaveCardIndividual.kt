@@ -9,8 +9,6 @@ import android.widget.Toast
 import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
-import jp.ac.asojuku.st.demeshi.HaveCardList
-import jp.ac.asojuku.st.demeshi.R
 import jp.ac.asojuku.st.demeshi.R.drawable.*
 import kotlinx.android.synthetic.main.activity_have_card_individual.*
 import org.json.JSONObject
@@ -19,7 +17,7 @@ class HaveCardIndividual : AppCompatActivity() {
 
     var user_id = 0
     var card_id = 0
-    val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+    val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_have_card_individual)

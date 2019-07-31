@@ -11,7 +11,7 @@ import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_have_card_detail.*
-import kotlinx.android.synthetic.main.activity_show_company.*
+import jp.ac.asojuku.st.demeshi.R.drawable.*
 import org.json.JSONObject
 
 class HaveCardDetail : AppCompatActivity() {
@@ -19,6 +19,7 @@ class HaveCardDetail : AppCompatActivity() {
     var user_id = 0
     var card_id = 0
     var company = ""
+    val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +46,7 @@ class HaveCardDetail : AppCompatActivity() {
         getData1()
         Handler().postDelayed(Runnable{
             getData2()
-        },500)
+        },1000)
 
         check.setOnClickListener {
             val intent = Intent(this, ShowCompany::class.java)
@@ -69,7 +70,9 @@ class HaveCardDetail : AppCompatActivity() {
                     Name1.text = (json[0] as JSONObject).get("name").toString()
                     Phone.text = (json[0] as JSONObject).get("number").toString()
                     Mail.text = (json[0] as JSONObject).get("address").toString()
-                    meisi_id.text = (json[0] as JSONObject).get("meisi_id").toString()
+                    CardId.text = (json[0] as JSONObject).get("meisi_id").toString()
+                    val Templateid=(json[0] as JSONObject).get("image").toString().toInt()
+                    MyCard1.setImageResource(ImgArray[Templateid-1])
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

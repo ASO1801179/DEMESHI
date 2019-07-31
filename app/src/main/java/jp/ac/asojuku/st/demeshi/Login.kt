@@ -35,7 +35,7 @@ class Login : AppCompatActivity() {
                     intent.putExtra("UserId", user_id)
                     startActivity(intent)
                 }
-            },1000)
+            },1500)
         }else{
             Toast.makeText(this, "ログイン情報を入力してください", Toast.LENGTH_LONG).show()
         }

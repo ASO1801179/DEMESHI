@@ -213,7 +213,7 @@ class MyCardList : AppCompatActivity() {
         //val URL:String = "http://18001187.pupu.jp/untitled/public/card/allget"
         val NameArray = arrayOf(R.id.Name1, R.id.Name2,R.id.Name3, R.id.Name4)
         val MyCardArray = arrayOf(MyCard1,MyCard2,MyCard3,MyCard4)
-        val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+        val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
 
         val URL:String = "http://kinoshitadaiki.bitter.jp/newDEMESI/public/list/create_card"
         URL.httpGet(listOf("user_id" to user_id)).responseJson() { request, response, result ->

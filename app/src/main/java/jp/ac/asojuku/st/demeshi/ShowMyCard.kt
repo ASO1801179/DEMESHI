@@ -19,7 +19,7 @@ class ShowMyCard : AppCompatActivity() {
     var user_id = 0
     var card_id = 0
     var company_id = ""
-    val ImgArray = arrayOf(green,f4796,f4788,f4786,f4790,f4791,space,f4782,f4792)
+    val ImgArray = arrayOf(new1,new2,new3,new4,new5,new6,new7,new8,new9)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         user_id = intent.getIntExtra("UserId",0)
@@ -35,7 +35,12 @@ class ShowMyCard : AppCompatActivity() {
         getDetail()
         Handler().postDelayed(Runnable{
             getCompany()
-        },500)
+        },1000)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        name1.text = Name1.text
     }
     fun Delete(){
         AlertDialog.Builder(this).apply {

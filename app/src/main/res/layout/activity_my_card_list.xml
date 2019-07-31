@@ -101,12 +101,12 @@
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/MyCard2"
+        app:layout_constraintStart_toEndOf="@+id/MyCard3"
         app:layout_constraintTop_toBottomOf="@+id/Name2" />
 
     <TextView
         android:id="@+id/Name4"
-        android:layout_width="@dimen/ListNameWidth"
+        android:layout_width="228dp"
         android:layout_height="@dimen/ListNameHeight"
         android:layout_marginEnd="144dp"
         android:layout_marginLeft="8dp"
@@ -118,17 +118,19 @@
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/MyCard2"
+        app:layout_constraintStart_toEndOf="@+id/MyCard4"
         app:layout_constraintTop_toBottomOf="@+id/Name3" />
 
     <ImageButton
         android:id="@+id/PhotoCardBtn"
         android:layout_width="@dimen/TabBtnWidth"
         android:layout_height="@dimen/TabBtnHeight"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:background="@color/TabColor"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/HaveCardBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/camera" />
 
     <ImageButton
@@ -138,13 +140,16 @@
         android:background="@color/TabColor"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MyCardBtn"
+        app:layout_constraintEnd_toEndOf="@+id/PhotoCardBtn"
+        app:layout_constraintStart_toStartOf="@+id/MyCardBtn"
         app:srcCompat="@drawable/havecard" />
 
     <ImageButton
         android:id="@+id/MyCardBtn"
         android:layout_width="@dimen/TabBtnWidth"
         android:layout_height="@dimen/TabBtnHeight"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
         android:background="@color/TabColor"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -162,6 +167,8 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/PhotoCardBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/add" />
 
 </android.support.constraint.ConstraintLayout>

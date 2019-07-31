@@ -22,19 +22,19 @@ class CreateIndividual : AppCompatActivity() {
 
         when (intent.getIntExtra("Image", 0)) {
             1 -> {
-                BackDesign.setImageResource(green)
+                BackDesign.setImageResource(new1)
             }
             2 -> {
-                BackDesign.setImageResource(f4796)
+                BackDesign.setImageResource(new2)
             }
             3 -> {
-                BackDesign.setImageResource(f4788)
+                BackDesign.setImageResource(new3)
             }
         }
         Name1.bringToFront()
         Phone.bringToFront()
         Mail.bringToFront()
-        place.bringToFront()
+        SNS.bringToFront()
         CreateBtn.setOnClickListener { CardCreate() }
     }
     override fun onResume() {
@@ -42,7 +42,7 @@ class CreateIndividual : AppCompatActivity() {
         Name1.text = "情報太郎"
         Phone.text = "0120-00-2229"
         Mail.text = "zyouhou@gmial.com"
-        place.text = "@完全個人"
+        SNS.text = "@完全個人"
     }
     fun CardCreate() {
         if (!EditName.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty()) {
