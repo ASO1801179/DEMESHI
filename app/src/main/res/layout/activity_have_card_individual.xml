@@ -29,7 +29,7 @@
         android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="名前"
-        android:textSize="@dimen/CreateTextSize"
+        android:textSize="@dimen/NameInCard"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toTopOf="@+id/BackDesign" />
     ​
@@ -110,7 +110,7 @@
 
     <TextView
         android:id="@+id/MailAddress"
-        android:layout_width="@dimen/TextWidth"
+        android:layout_width="@dimen/MyCardWidth"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginEnd="25dp"
         android:layout_marginLeft="25dp"

@@ -26,6 +26,7 @@ class ShowCompany : AppCompatActivity() {
 
         BackBtn.setOnClickListener {
             val sw = intent.getStringExtra("Flag")
+            println(sw)
             if(sw == "My"){
                 val intent = Intent(this, ShowMyCard::class.java)
                 intent.putExtra("UserId", user_id)
@@ -54,7 +55,7 @@ class ShowCompany : AppCompatActivity() {
                         Place.text = json.get("company_place").toString()
                         PhoneNumber.text = "電話番号：" + json.get("company_phone").toString()
                         Phone.text = json.get("company_phone").toString()
-                        MaiAddress.text = "メールアドレス：" + json.get("company_mail").toString()
+                        MaiAddress.text = "メール：" + json.get("company_mail").toString()
                         Mail.text = json.get("company_mail").toString()
                         Url_name.text = "URL：" + json.get("company_url").toString()
                         URLName.text = json.get("company_url").toString()

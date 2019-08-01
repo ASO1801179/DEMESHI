@@ -60,7 +60,7 @@ class ShowIndividual : AppCompatActivity() {
                     name1.text = json.get("name").toString()
                     PhoneNumber.text= "電話番号：" + json.get("number").toString()
                     Phone.text = json.get("number").toString()
-                    MailAddress.text= "メールアドレス：" + json.get("address").toString()
+                    MailAddress.text= "メール：" + json.get("address").toString()
                     Mail.text = json.get("address").toString()
                     Templateid=json.get("img").toString().toInt()
                     MyCard1.setImageResource(ImgArray[Templateid-1])

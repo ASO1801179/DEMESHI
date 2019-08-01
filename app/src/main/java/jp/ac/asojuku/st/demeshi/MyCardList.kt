@@ -181,49 +181,49 @@ class MyCardList : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId){
-            R.id.UserConfig ->{
-                val intent = Intent(this,UserConfig::class.java)
-                startActivity(intent)
-            }
-            R.id.Delete->{
-                val intent = Intent(this,Login::class.java)
-                AlertDialog.Builder(this).apply {
-                    setTitle("退会")
-                    setMessage("本当に退会しますか？")
-                    setPositiveButton("退会", DialogInterface.OnClickListener { _, _ ->
-                        // OKをタップしたときの処理
-                        //Toast.makeText(context, "退会しました", Toast.LENGTH_LONG).show()
-                        val URL:String = "http://18001187.pupu.jp/untitled/public/user/delete"
-                        URL.httpGet(listOf("user_id" to user_id)).responseJson() { request, response, result ->
-                            when (result) {
-                                is Result.Success -> {
-                                    // レスポンスボディを表示
-                                    val json = result.value.obj()
-                                    val results = json.get("result")// as JSONArray
-                                    if(results == 1){
-                                        Toast.makeText(context, "退会しました", Toast.LENGTH_LONG).show()
-                                        startActivity(intent)
-                                    }
-                                    else{
-                                        Toast.makeText(context, "サーバに問題があり、退会できませんでした", Toast.LENGTH_LONG).show()
-                                    }
-                                }
-                                is Result.Failure -> {
-                                    println("通信に失敗しました。")
-                                }
-                            }
-                        }
-                    })
-                    setNegativeButton("キャンセル", null)
-                    show()
-                }
-
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        when(item?.itemId){
+//            R.id.UserConfig ->{
+//                val intent = Intent(this,UserConfig::class.java)
+//                startActivity(intent)
+//            }
+//            R.id.Delete->{
+//                val intent = Intent(this,Login::class.java)
+//                AlertDialog.Builder(this).apply {
+//                    setTitle("退会")
+//                    setMessage("本当に退会しますか？")
+//                    setPositiveButton("退会", DialogInterface.OnClickListener { _, _ ->
+//                        // OKをタップしたときの処理
+//                        //Toast.makeText(context, "退会しました", Toast.LENGTH_LONG).show()
+//                        val URL:String = "http://18001187.pupu.jp/untitled/public/user/delete"
+//                        URL.httpGet(listOf("user_id" to user_id)).responseJson() { request, response, result ->
+//                            when (result) {
+//                                is Result.Success -> {
+//                                    // レスポンスボディを表示
+//                                    val json = result.value.obj()
+//                                    val results = json.get("result")// as JSONArray
+//                                    if(results == 1){
+//                                        Toast.makeText(context, "退会しました", Toast.LENGTH_LONG).show()
+//                                        startActivity(intent)
+//                                    }
+//                                    else{
+//                                        Toast.makeText(context, "サーバに問題があり、退会できませんでした", Toast.LENGTH_LONG).show()
+//                                    }
+//                                }
+//                                is Result.Failure -> {
+//                                    println("通信に失敗しました。")
+//                                }
+//                            }
+//                        }
+//                    })
+//                    setNegativeButton("キャンセル", null)
+//                    show()
+//                }
+//
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
     //作成した名刺一覧
     fun GetMyCard(){

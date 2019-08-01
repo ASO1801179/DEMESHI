@@ -46,13 +46,6 @@ class CreateCompany : AppCompatActivity() {
         Mail.bringToFront()
         URL.bringToFront()
     }
-    override fun onResume() {
-        super.onResume()
-        CompanyName.text = "〇〇株式会社"
-        Phone.text = "xxx-xxx-xxxx"
-        Mail.text = "xxxx@gmial.com"
-        URL.text = "会社追加"
-    }
 
     fun Create() {
         if (!EditCompanyName1.text.toString().isEmpty() and !EditPhone.text.toString().isEmpty() and !EditMail.text.toString().isEmpty() and !EditUrl.text.toString().isEmpty() and !place.text.toString().isEmpty() ) {

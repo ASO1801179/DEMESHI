@@ -22,13 +22,13 @@
         android:id="@+id/BackLogin"
         android:layout_width="@dimen/BtnWidth"
         android:layout_height="@dimen/BtnHeight"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="8dp"
         android:text="@string/MoveLogin"
         android:textSize="@dimen/BtnTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997" />
 </android.support.constraint.ConstraintLayout>

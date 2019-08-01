@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/Mail"
-        android:layout_width="@dimen/TextWidth"
+        android:layout_width="@dimen/MailTextSize"
         android:layout_height="@dimen/TextHeight"
         android:layout_marginEnd="25dp"
         android:layout_marginLeft="25dp"
@@ -140,7 +140,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="藤家　竜"
-        android:textSize="@dimen/CreateTextSize"
+        android:textSize="@dimen/NameInCard"
         app:layout_constraintBottom_toBottomOf="@+id/MyCard1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.386"

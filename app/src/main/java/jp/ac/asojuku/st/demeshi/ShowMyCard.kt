@@ -40,6 +40,8 @@ class ShowMyCard : AppCompatActivity() {
         check.setOnClickListener {
             val intent = Intent(this, ShowCompany::class.java)
             intent.putExtra("Flag","My")
+            intent.putExtra("UserId",user_id)
+            intent.putExtra("CardId",card_id)
             intent.putExtra("company_id", company_id.toString())
             startActivity(intent)
         }
@@ -72,7 +74,7 @@ class ShowMyCard : AppCompatActivity() {
                     var Templateid = 0
                     Name1.text = "名前：" + json.get("name").toString()
                     name1.text = json.get("name").toString()
-                    Mail.text = "メールアドレス：" + json.get("address").toString()
+                    Mail.text = "メール：" + json.get("address").toString()
                     mail.text = json.get("address").toString()
                     Phone.text = "電話番号：" + json.get("number").toString()
                     phone.text = json.get("number").toString()

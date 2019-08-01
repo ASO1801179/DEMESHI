@@ -72,7 +72,7 @@ class HaveCardDetail : AppCompatActivity() {
                     name1.text = (json[0] as JSONObject).get("name").toString()
                     Phone.text = "電話番号" + (json[0] as JSONObject).get("number").toString()
                     phone.text = (json[0] as JSONObject).get("number").toString()
-                    Mail.text = "メールアドレス：" + (json[0] as JSONObject).get("address").toString()
+                    Mail.text = "メール：" + (json[0] as JSONObject).get("address").toString()
                     mail.text = (json[0] as JSONObject).get("address").toString()
                     CardId.text = "名刺ID：" + (json[0] as JSONObject).get("meisi_id").toString()
                     val Templateid=(json[0] as JSONObject).get("img").toString().toInt()

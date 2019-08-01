@@ -6,7 +6,7 @@
     <dimen name="BtnTextSize">40sp</dimen>
     <dimen name="BtnWidth">360dp</dimen>
     <dimen name="BtnHeight">85dp</dimen>
-    <dimen name="TextSize">24sp</dimen>
+    <dimen name="TextSize">16sp</dimen>
     <dimen name="TextWidth">450dp</dimen>
     <dimen name="TextHeight">50dp</dimen>
     <dimen name="TextBoxWidth">360dp</dimen>
@@ -19,7 +19,7 @@
     <dimen name="BackBtnTextSize">14sp</dimen>
     <dimen name="CreateTextWidth">250dp</dimen>
     <dimen name="CreateTextHeight">50dp</dimen>
-    <dimen name="CreateTextSize">28sp</dimen>
+    <dimen name="CreateTextSize">16sp</dimen>
     <dimen name="CreateBtnWidth">200dp</dimen>
     <dimen name="CreateBtnHeight">50dp</dimen>
     <dimen name="TemplateTextHeight">60dp</dimen>
@@ -46,4 +46,6 @@
     <dimen name="DetailBtnHeight">50dp</dimen>
     <dimen name="DetailBtnWidth">100dp</dimen>
     <dimen name="CompanyInfoText">20sp</dimen>
+    <dimen name="MailTextSize">550dp</dimen>
+    <dimen name="NameInCard">28sp</dimen>
 </resources>

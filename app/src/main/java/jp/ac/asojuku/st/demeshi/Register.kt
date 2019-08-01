@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class Register : AppCompatActivity() {
 
-    var bool = true
+    var bool = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,26 +59,22 @@ class Register : AppCompatActivity() {
                     when(results){
                         1->{
                             Toast.makeText(this, "メールを送信しました", Toast.LENGTH_LONG).show()
+                            bool = true
                         }
                         2->{
                             Toast.makeText(this, "メールが既に登録されているものです", Toast.LENGTH_LONG).show()
-                            bool = false
                         }
                         3->{
                             Toast.makeText(this, "電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
-                            bool = false
                         }
                         4->{
                             Toast.makeText(this, "メールと電話番号が既に登録されているものです", Toast.LENGTH_LONG).show()
-                            bool = false
                         }
                         5->{
                             Toast.makeText(this, "サーバに問題があり、登録できませんでした。", Toast.LENGTH_LONG).show()
-                            bool = false
                         }
                         6->{
                             Toast.makeText(this, "入力した値がおかしいです", Toast.LENGTH_LONG).show()
-                            bool = false
                         }
                     }
                 }
