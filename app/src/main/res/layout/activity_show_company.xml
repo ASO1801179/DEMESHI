@@ -22,8 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/meishi" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/CompanyName"
@@ -35,14 +34,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
-        android:hint="会社名"
-        android:text="会社名"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MyCard1"
-        tools:text="会社名" />
+        app:layout_constraintTop_toBottomOf="@+id/MyCard1" />
 
     <TextView
         android:id="@+id/Address"
@@ -54,13 +50,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="center_vertical"
-        android:text="所在地"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyName"
-        tools:text="住所" />
+        app:layout_constraintTop_toBottomOf="@+id/CompanyName" />
 
     <TextView
         android:id="@+id/PhoneNumber"
@@ -72,13 +66,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="center_vertical"
-        android:text="電話番号"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address"
-        tools:text="電話番号" />
+        app:layout_constraintTop_toBottomOf="@+id/Address" />
 
     <TextView
         android:id="@+id/MaiAddress"
@@ -91,15 +83,13 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="center_vertical"
-        android:text="メールアドレス"
         android:textSize="@dimen/TextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Url_name"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="メールアドレス" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Url_name"
@@ -111,27 +101,12 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="center_vertical"
-        android:text="URL"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
-        tools:text="@string/URL" />
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber" />
 
-    <Button
-        android:id="@+id/CallBtn1"
-        android:layout_width="@dimen/DetailBtnWidth"
-        android:layout_height="@dimen/DetailBtnHeight"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:text="電話"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/PhoneNumber"
-        app:layout_constraintTop_toTopOf="@+id/PhoneNumber" />
     <Button
         android:id="@+id/BackBtn"
         android:layout_width="@dimen/BackBtnWidth"
@@ -152,7 +127,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="所在地"
         android:textSize="@dimen/TextSize"
         app:layout_constraintStart_toStartOf="@+id/MyCard1"
         app:layout_constraintTop_toBottomOf="@+id/companyName" />
@@ -165,7 +139,6 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:gravity="left|center"
-        android:text="URL"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="@+id/MyCard1"
         app:layout_constraintTop_toBottomOf="@+id/Mail" />
@@ -178,7 +151,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="企業名"
         android:textSize="@dimen/NameInCard"
         app:layout_constraintBottom_toBottomOf="@+id/MyCard1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +166,6 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:gravity="left|center"
-        android:text="電話番号"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="@+id/MyCard1"
         app:layout_constraintTop_toBottomOf="@+id/companyName" />
@@ -207,7 +178,6 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:gravity="left"
-        android:text="メールアドレス"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="@+id/MyCard1"
         app:layout_constraintTop_toBottomOf="@+id/Phone" />

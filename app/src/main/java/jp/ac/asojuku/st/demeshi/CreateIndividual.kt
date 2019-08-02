@@ -17,7 +17,11 @@ class CreateIndividual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_individual)
-        Back.setOnClickListener { startActivity(Intent(it.context, Template::class.java)) }
+        Back.setOnClickListener {
+            val intent = Intent(this,Template::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         user_id = intent.getIntExtra("UserId", 0)
 
         when (intent.getIntExtra("Image", 0)) {

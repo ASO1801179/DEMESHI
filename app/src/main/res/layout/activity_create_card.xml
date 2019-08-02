@@ -112,7 +112,7 @@
         android:layout_marginStart="74dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="名前"
+        android:text="@string/NameHint"
         android:textSize="@dimen/NameInCard"
         app:layout_constraintBottom_toBottomOf="@+id/BackDesign"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,7 +128,7 @@
         android:layout_height="@dimen/Create_Height"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="電話番号"
+        android:text="@string/PhoneHint"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Mail" />
@@ -142,7 +142,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="企業名"
+        android:text="@string/CompanyNameHint"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Name1" />
@@ -155,7 +155,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="32dp"
-        android:text="メールアドレス"
+        android:text="@string/MailHint"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Name1" />

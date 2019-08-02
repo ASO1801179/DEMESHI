@@ -25,6 +25,11 @@ class CompanyInfo : AppCompatActivity() {
         user_id = intent.getIntExtra("UserId",0)
         img = intent.getIntExtra("Image",0)
         val confirm = intent.getStringExtra("Confirm")
+        Back.setOnClickListener{
+            val intent = Intent(this,MyCardList::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         if(confirm == "Company"){
             CompanyText.text = "企業IDと企業パスワードを設定してください"
             CompanyBtn.text = "登録"

@@ -2,6 +2,7 @@ package jp.ac.asojuku.st.demeshi
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -35,7 +36,7 @@ class ShowMyCard : AppCompatActivity() {
         getDetail()
         Handler().postDelayed(Runnable{
             getCompany()
-        },1500)
+        },750)
 
         check.setOnClickListener {
             val intent = Intent(this, ShowCompany::class.java)
@@ -81,6 +82,8 @@ class ShowMyCard : AppCompatActivity() {
                     CardId.text = "名刺ID：" + card_id.toString()
                     Templateid=json.get("img").toString().toInt()
                     MyCard1.setImageResource(ImgArray[Templateid-1])
+                    check.setBackgroundColor(Color.LTGRAY)
+                    check.text = "詳細"
                     company_id = json.get("company_id").toString()
                 }
                 is Result.Failure -> {

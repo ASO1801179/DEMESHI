@@ -238,12 +238,12 @@ class MyCardList : AppCompatActivity() {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     val json = result.value.array()
-                    var cnt = 0
+                    //var cnt = 0
                     var name = ""
                     var NameText:TextView
                     var TemplateId = 0
                     for(i in 0..(json.length()-1)){
-                        cnt++
+                        //cnt++
                         name = (json[i] as JSONObject).get("name").toString()
                         NameText = findViewById(NameArray[i]) as TextView
                         NameText.setText(name)
@@ -257,13 +257,13 @@ class MyCardList : AppCompatActivity() {
                             break
                         }
                     }
-                    if(cnt != 4){
-                        for(i in 0..(3-cnt)){
-                            MyCardArray[3-i].setImageResource(screen_background_light)
-                            NameText = findViewById(NameArray[3-i]) as TextView
-                            NameText.text = ""
-                        }
-                    }
+//                    if(cnt != 4){
+//                        for(i in 0..(3-cnt)){
+//                            MyCardArray[3-i].setImageResource(screen_background_light)
+//                            NameText = findViewById(NameArray[3-i]) as TextView
+//                            NameText.text = ""
+//                        }
+//                    }
                 }
                 is Result.Failure -> {
                     println("通信に失敗しました。")

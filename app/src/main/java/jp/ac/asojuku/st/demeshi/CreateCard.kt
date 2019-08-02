@@ -23,7 +23,11 @@ class CreateCard : AppCompatActivity() {
         user_id = intent.getIntExtra("UserId",0)
         company_id = intent.getStringExtra("CompanyID")
 
-        Back.setOnClickListener{startActivity(Intent(it.context,Template::class.java))}
+        Back.setOnClickListener{
+            val intent = Intent(this,Template::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         CreateBtn.setOnClickListener{Create()}
         when(intent.getIntExtra("Image",0)){
             4->{

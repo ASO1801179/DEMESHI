@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_have_card_list.*
 import android.R.drawable.*
+import android.graphics.Color
 import android.widget.TextView
 import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.httpGet
@@ -191,6 +192,10 @@ class HaveCardList : AppCompatActivity() {
                         HaveCardArray[i].setImageResource(ImgArray[TemplateId-1])
                         CardId[i] = (json[i] as JSONObject).get("meisi_id").toString().toInt()
                         CompanyFlag[i] = (json[i] as JSONObject).get("flag").toString().toInt()
+                        CallArray[i].setBackgroundColor(Color.LTGRAY)
+                        MailArray[i].setBackgroundColor(Color.LTGRAY)
+                        CallArray[i].text = "電話"
+                        MailArray[i].text = "メール"
                         Flag[i] = true
                         if(i==3){
                             break

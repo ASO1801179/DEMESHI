@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/meishi" />
+        app:srcCompat="@android:drawable/screen_background_light" />
 
     <ImageView
         android:id="@+id/MyCard2"
@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MyCard1"
-        app:srcCompat="@drawable/meishi" />
+        app:srcCompat="@android:drawable/screen_background_light" />
 
     <ImageView
         android:id="@+id/MyCard3"
@@ -37,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MyCard2"
-        app:srcCompat="@drawable/meishi" />
+        app:srcCompat="@android:drawable/screen_background_light" />
 
     <ImageView
         android:id="@+id/MyCard4"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MyCard3"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/meishi" />
+        app:srcCompat="@android:drawable/screen_background_light" />
 
     <TextView
         android:id="@+id/Name1"
@@ -63,7 +63,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:gravity="left|center"
-        android:text="名前"
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +79,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:gravity="left|center"
-        android:text="名前"
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,7 +95,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:gravity="left|center"
-        android:text="名前"
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -114,7 +111,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:gravity="left|center"
-        android:text="名前"
         android:textSize="@dimen/ListTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

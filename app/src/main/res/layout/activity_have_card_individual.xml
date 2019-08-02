@@ -23,12 +23,11 @@
     <TextView
         android:id="@+id/name1"
         android:layout_width="@dimen/Create_Width"
-        android:layout_height="@dimen/Create_Height"
+        android:layout_height="38dp"
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="名前"
         android:textSize="@dimen/NameInCard"
         app:layout_constraintStart_toStartOf="@+id/BackDesign"
         app:layout_constraintTop_toTopOf="@+id/BackDesign" />
@@ -40,7 +39,6 @@
         android:layout_height="@dimen/Create_Height"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="電話番号"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/Mail" />
@@ -53,7 +51,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
-        android:text="メールアドレス"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
         app:layout_constraintTop_toBottomOf="@+id/name1" />
@@ -65,11 +62,9 @@
         android:layout_height="@dimen/Create_Height"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="TextView"
         android:textSize="@dimen/CreateTextSize"
         app:layout_constraintEnd_toEndOf="@+id/BackDesign"
-        app:layout_constraintTop_toBottomOf="@+id/Phone"
-        tools:text="@string/SNSHint" />
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
 
     <TextView
         android:id="@+id/Name1"
@@ -81,14 +76,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="left|center_vertical"
-        android:hint="会社名"
-        android:text="名前"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackDesign"
-        tools:text="名前" />
+        app:layout_constraintTop_toBottomOf="@+id/BackDesign" />
 
     <TextView
         android:id="@+id/PhoneNumber"
@@ -100,13 +92,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="left|center_vertical"
-        android:text="電話番号"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name1"
-        tools:text="@string/PhoneHint" />
+        app:layout_constraintTop_toBottomOf="@+id/Name1" />
 
     <TextView
         android:id="@+id/MailAddress"
@@ -118,13 +108,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="left|center_vertical"
-        android:text="メールアドレス"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
-        tools:text="@string/MailHint" />
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber" />
 
     <TextView
         android:id="@+id/SNS"
@@ -136,13 +124,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="left|center_vertical"
-        android:text="SNS"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MailAddress"
-        tools:text="@string/SNSHint" />
+        app:layout_constraintTop_toBottomOf="@+id/MailAddress" />
 
     <TextView
         android:id="@+id/CardId"
@@ -154,7 +140,6 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:gravity="left|center_vertical"
-        android:text="名刺ID"
         android:textSize="@dimen/TextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

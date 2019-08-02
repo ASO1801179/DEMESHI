@@ -23,7 +23,11 @@ class CreateCompany : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_company)
-        Back.setOnClickListener { startActivity(Intent(it.context, Template::class.java)) }
+        Back.setOnClickListener {
+            val intent = Intent(this,Template::class.java)
+            intent.putExtra("UserId",user_id)
+            startActivity(intent)
+        }
         CreateBtn.setOnClickListener { Create() }
 
         user_id = intent.getIntExtra("UserId", 0)
